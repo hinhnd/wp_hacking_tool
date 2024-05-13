@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tool</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      table {
+        margin-top: 10px;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      .tables a:hover {
+        text-decoration: underline;
+      }
+
+      .result {
+        display: flex;
+        align-items: center;
+      }
+
+      .result a {
+        margin-left: 10px;
+      }
+
+      #done {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      
+      <table class="tables">
+        <tr>
+          <th>NAME</th>
+          <th>TIME</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>Waf</td>
+          <td>{{time_waf}}</td>
+          <td class="result">
+            {{ data_waf }}
+            <a href={{url}} target="_blank">Show</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Nmap</td>
+          <td>{{ time_nmap }}</td>
+          <td><a href="/viewnmap" target="_blank">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Wpscan</td>
+          <td>{{time_wpscan}}</td>
+          <td><a href="/viewwpscan" target="_blank">Detail</a></td>
+        </tr>
+        <tr>
+          <td>Brute</td>
+          <td>{{time_brute}}</td>
+          <td>
+            {% for line in data_brute %}
+            <li>{{ line }}</li>
+            <!-- Hiển thị từng phần tử trong mảng -->
+            {% endfor %}
+          </td>
+        </tr>
+      </table>
+
+      <h3 id="done">Đã quét xong</h3>
+    </div>
+  </body>
+</html>

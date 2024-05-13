@@ -1,0 +1,5 @@
+admin
+wordpress
+wpuser
+root
+ftpuser

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scan With Wpscan</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-wrap: wrap;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      .attack {
+        width: 70%;
+        margin: 20px;
+      }
+      .container {
+        width: 950px;
+        height: 550px;
+        margin-top: 100px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        overflow: auto;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        font-family: monospace;
+        margin: 0;
+      }
+      .highlight {
+        font-size: 13px;
+        font-weight: bold;
+        color: red;
+      }
+      .highlight1 {
+        font-size: 15px;
+        font-weight: bold;
+        color: black;
+      }
+      .highlight2 {
+        font-size: 18px;
+        font-weight: bold;
+        color: Black;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #e0e0e0;
+      }
+
+      td span {
+        font-weight: bold;
+      }
+
+      td span[style*="color:#228B22"] {
+        color: #228b22;
+      }
+
+      td span[style*="color:#cccc00"] {
+        color: #cccc00;
+      }
+
+      td span[style*="color:#ba0000"] {
+        color: #ba0000;
+      }
+
+      td span[style*="color:#008000"] {
+        color: #008000;
+      }
+      .input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      #ip {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        flex: 1;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+      #running {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        width: 90%;
+        height: 90%;
+        text-align: center;
+      }
+      h1{
+        position: absolute;
+        top: 30px;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>WPSCAN</h1>
+      <div class="container">
+        <div id="tableContainer"></div>
+        <pre id="content"></pre>
+      </div>
+
+    <script>
+          fetch("/html")
+            .then((response) => response.text())
+            .then((data) => {
+              console.log(data)
+              const parser = new DOMParser();
+              const htmlDocument = parser.parseFromString(data, "text/html");
+              const table = htmlDocument.querySelector("table");
+
+              const tableContainer = document.getElementById("tableContainer");
+              tableContainer.appendChild(table);
+            })
+            .catch((error) => {
+              console.error("Lỗi:", error);
+            });
+
+          var filePath = "/txt"; // Đường dẫn tuyệt đối đến tệp văn bản
+
+          var xhr = new XMLHttpRequest();
+
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (xhr.status === 200) {
+                var content = xhr.responseText;
+                var lines = content.split("\n");
+
+                var startIndex = lines.findIndex((line) =>
+                  line.includes("Plugin(s) Identified")
+                );
+                var selectedLines = lines.slice(startIndex);
+
+                var formattedLines = selectedLines.map(function (line) {
+                  if (line.toLowerCase().includes("title")) {
+                    line = '<span class="highlight">' + line + "</span>";
+                  }
+                  if (
+                    line.toLowerCase().includes("vulnerabilities identified")
+                  ) {
+                    line = '<span class="highlight1">' + line + "</span>";
+                  }
+                  if (line.toLowerCase().includes("[32m[+]")) {
+                    line = '<span class="highlight2">' + line + "</span>";
+                  }
+                  var urls = line.match(/(http\S+)/g);
+                  if (urls) {
+                    urls.forEach(function (url) {
+                      line = line.replace(
+                        url,
+                        '<a href="' + url + '" target="_blank">' + url + "</a>"
+                      );
+                    });
+                  }
+                  return line;
+                });
+
+                var formattedContent = formattedLines.join("\n");
+                document.getElementById("content").innerHTML = formattedContent;
+              } else {
+                console.error("Failed to load text file.");
+              }
+            }
+          };
+
+          xhr.open("GET", filePath, true);
+          xhr.send();
+    </script>
+  </body>
+</html>

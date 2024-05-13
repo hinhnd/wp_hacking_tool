@@ -1,0 +1,669 @@
+Vulnerabilities have been detected by WPScan.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Summary<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;-------<br/>
+<br/>
+<table>
+        <tr>
+            <th>Component</th>
+            <th>Version</th>
+            <th>Version State</th>
+            <th>Vulnerabilities</th>
+            <th>Status</th>
+        </tr>
+          <tr>
+        <td>WordPress 6.5.2 (2024-04-09)</td>
+        <td>6.5.2</td>
+        <td><span style="color:#228B22">Latest</span></td>
+        <td><span style="color:#000000">0</span></td>
+        <td><b style="color:#008000">Ok</b></td>
+    </tr>
+          <tr>
+        <td>Main Theme: woodmart</td>
+        <td>7.1.4</td>
+        <td><span style="color:#cccc00">Outdated (latest is 7.5.1)</span></td>
+        <td><span style="color:#ba0000">2</span></td>
+        <td><b style="color:#BA0000">Alert</b></td>
+    </tr>
+          <tr>
+        <td>Plugin: contact-form-7</td>
+        <td>5.9.3</td>
+        <td><span style="color:#228B22">Latest</span></td>
+        <td><span style="color:#000000">0</span></td>
+        <td><b style="color:#008000">Ok</b></td>
+    </tr>
+          <tr>
+        <td>Plugin: elementor</td>
+        <td>3.21.0</td>
+        <td><span style="color:#cccc00">Outdated (latest is 3.21.4)</span></td>
+        <td><span style="color:#000000">0</span></td>
+        <td><b style="color:#cccc00">Warning</b></td>
+    </tr>
+          <tr>
+        <td>Plugin: elementor-pro</td>
+        <td>3.13.2</td>
+        <td><span style="color:#000000">Unknown</span></td>
+        <td><span style="color:#ba0000">7</span></td>
+        <td><b style="color:#BA0000">Alert</b></td>
+    </tr>
+          <tr>
+        <td>Plugin: essential-addons-for-elementor-lite</td>
+        <td>5.8.11</td>
+        <td><span style="color:#cccc00">Outdated (latest is 5.9.19)</span></td>
+        <td><span style="color:#ba0000">19</span></td>
+        <td><b style="color:#BA0000">Alert</b></td>
+    </tr>
+          <tr>
+        <td>Plugin: revslider</td>
+        <td>6.6.12</td>
+        <td><span style="color:#cccc00">Outdated (latest is 6.7.9)</span></td>
+        <td><span style="color:#ba0000">6</span></td>
+        <td><b style="color:#BA0000">Alert</b></td>
+    </tr>
+          <tr>
+        <td>Plugin: woocommerce</td>
+        <td>Unknown</td>
+        <td><span style="color:#000000">N/A (latest is 8.8.3)</span></td>
+        <td><span style="color:#000000">40 (potential)</span></td>
+        <td><b style="color:#cccc00">Warning</b></td>
+    </tr>
+    
+    </table>
+    <br/>WPScan result summary: alerts=34, warnings=45, infos=12, error=0<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Alerts<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;------<br/>
+<br/>
+Vulnerability: WoodMart < 7.2.2 - Subscriber+ Stored XSS<br/>
+Fixed in: 7.2.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32239<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/6eb2d429-1610-4068-9c51-8361c168c3a0<br/>
+<br/>
+Vulnerability: WoodMart < 7.2.5 - Reflected XSS<br/>
+Fixed in: 7.2.5<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-41872<br/>
+- Url: https://patchstack.com/database/vulnerability/woodmart/wordpress-woodmart-theme-7-2-4-reflected-cross-site-scripting-xss-vulnerability<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/9253eae2-424d-4ee2-9029-012f5a76c1fd<br/>
+<br/>
+Vulnerability: Elementor Pro < 3.19.3 - Authenticated (Contributor+) Information Exposure<br/>
+Fixed in: 3.19.3<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23523<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/ecc8996a-d95c-4711-ac7d-523f5100c7fc<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/52195b1a-31b9-46da-bed8-7fdd2c6c8c14<br/>
+<br/>
+Vulnerability: Elementor Website Builder Pro < 3.20.2 - Authententicated (Contributor+) Stored Cross-Site Scripting<br/>
+Fixed in: 3.20.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1364<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/531954dd-ed3f-4626-adab-c1bba8407c89<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/d332bb66-e69c-4d11-8ff2-2c35d7ce2808<br/>
+<br/>
+Vulnerability: Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) DOM-Based Stored Cross-Site Scripting via video_html_tag<br/>
+Fixed in: 3.20.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2781<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/54970085-5206-45b6-adcf-11e6dd4cd633<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/964c149d-fb08-4f86-a9a8-34a4412b5fdd<br/>
+<br/>
+Vulnerability: Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting<br/>
+Fixed in: 3.20.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2121<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/8698d6dd-7376-4d29-8a5c-21c239a7aa03<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/a48b0031-02f6-4871-beb3-0f61e1cd3d28<br/>
+<br/>
+Vulnerability: Elementor Website Builder – More than Just a Page Builder < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Post Navigation<br/>
+Fixed in: 3.20.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2120<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/de1742d4-f498-4ad4-b6a1-88cb60e83afc<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/ed24ea21-967a-43e3-8219-daed594c6e11<br/>
+<br/>
+Vulnerability: Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Form Widget SVGZ File Upload<br/>
+Fixed in: 3.20.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1521<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/ecd01ea6-9476-47e1-9959-3f8d9ce1c1f3<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/249f4270-610c-4422-b34f-e714358fb398<br/>
+<br/>
+Vulnerability: Elementor Website Builder Pro < 3.21.2 - Authenticated (Contributor+) DOM-Based Stored Cross-Site Scripting<br/>
+Fixed in: 3.21.2<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4107<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/0d5d47bd-4f05-4dc7-84c1-f7bc1196ee16<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/f54baf17-050d-4972-9631-3026dfb04496<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.3 - Contributor+ Stored XSS<br/>
+Fixed in: 5.9.3<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7044<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/6e770e98-3c13-4e37-b51b-4c39bce2cb42<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/10a73fea-68b4-4861-8ac1-b5ac278fed11<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.5 - Contributor+ Stored Cross-Site Scripting via Image URl<br/>
+Fixed in: 5.9.5<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0585<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/417baa1c-29f0-4fec-8008-5b52359b3328<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/6955630f-29c0-4996-9184-325ea153dfcf<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.5 - Contributor+ Stored Cross-Site Scritping<br/>
+Fixed in: 5.9.5<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0586<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/c00ff4bd-d846-4e3f-95ed-2a6430c47ebf<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/427af876-f60c-4219-b5de-1c72b41c0136<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.8 - Contributor+ Stored XSS<br/>
+Fixed in: 5.9.8<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0954<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/875db71d-c799-40b9-95e1-74d53046b0a9<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/d6f1740c-9e31-4be1-81ff-62bfd5b568fe<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting via Filterable Gallery<br/>
+Fixed in: 5.9.9<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1171<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/fafdd087-9637-41df-bc5a-97e1a02ea744<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/49240593-fb6a-4d8c-a369-c4606cd9ee24<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting via Accordion<br/>
+Fixed in: 5.9.9<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1172<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/f2ff2cc6-b584-442b-890b-033a0a047c24<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/0a8dde9a-bac0-498d-a68e-466a29401a08<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting<br/>
+Fixed in: 5.9.9<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1276<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/af8bee01-15bc-485e-8b01-8b68b199b34d<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/538a02f8-1aac-4f5e-ad22-7b98745be27e<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting<br/>
+Fixed in: 5.9.9<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1236<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/43014ecd-72d9-44cc-be24-c0c9790ddc20<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/5e0c33f9-178d-42ca-bc5f-f1354be951e5<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.10 - Contributor+ Stored Cross-Site Scripting via Data Table<br/>
+Fixed in: 5.9.10<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1537<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/81a48c61-4191-4252-9230-9df8fc5e3443<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/76499eab-5dee-4f9a-b7cf-d89d46ce5e8b<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.10 - Contributor+ Stored Cross-Site Scripting via Event Calendar<br/>
+Fixed in: 5.9.10<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1536<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/12dc9e63-17bb-4755-be3c-ae8b26edd3cd<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/fc358e07-84d1-48c2-bc0a-72c399b3163c<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.12 - Contributor+ Stored XSS<br/>
+Fixed in: 5.9.12<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2650<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/7242d808-9c33-4b3f-bda6-b4b72ca37de9<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/8a3c90da-f467-4795-b912-afe7c43e8258<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.12 - Contributor+ Stored XSS<br/>
+Fixed in: 5.9.12<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2623<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/baa92aee-a0a0-45d4-aa12-1449a829930c<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/78d2f15c-a336-4749-bd1e-9507165061f3<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.14 - Unauthenticated Private/Draft Posts Access<br/>
+Fixed in: 5.9.14<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2974<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/78f96d7f-aeca-4959-9573-0fb6402de007<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/e2aa7fa0-d9c4-4a41-9479-350ea2ba375a<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.14 - Author+ PHP Object Injection<br/>
+Fixed in: 5.9.14<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3018<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/342049e5-834e-4867-8174-01ca7bb0caa2<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/1f720bb4-0018-4d46-83bb-034cb4d5c372<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor < 5.9.15 - Contributor+ Store XSS via Widget URL<br/>
+Fixed in: 5.9.15<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3333<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/aa5bdaf9-fbde-40d4-a72a-fd24489818b3<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/9833f8a9-837f-4e62-9050-c6f656b873a4<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.16 - Contributor+ Stored Cross-Site Scripting<br/>
+Fixed in: 5.9.16<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4003<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/1cf3190c-e247-4bcc-99e0-2ab2d2fa0590<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/de4bd46a-d2fa-48ca-8344-3d7cc30667c5<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor  < 5.9.16 - Contributor+ Stored Cross-Site Scripting <br/>
+Fixed in: 5.9.16<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3728<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/284ea577-ff67-4681-995b-f7bb5ef0ff3e<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/2c8eed37-8784-4c48-b819-e2dd4301ca20<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor  < 5.9.16 - Information Exposure<br/>
+Fixed in: 5.9.16<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3733<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/3d604f7a-947c-43f4-bba6-e7e98b2d7844<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/11c8df8e-822e-402e-b94f-81d15a7dfe0a<br/>
+<br/>
+Vulnerability: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.18 - Contributor+ Stored XSS<br/>
+Fixed in: 5.9.18<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4156<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/23a66e6b-cec0-4110-9bef-a5d41ce1c954<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/0341204b-0260-451f-ae5c-66d3afd81f9f<br/>
+<br/>
+Vulnerability: Revolution Slider <= 6.6.12 - Author+ Remote Code Execution<br/>
+Fixed in: 6.6.13<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2359<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/a8350890-e6d4-4b04-a158-2b0ee3748e65<br/>
+<br/>
+Vulnerability: Slider Revolution < 6.6.15 - Authenticated (Contributor+) Stored Cross-Site Scripting<br/>
+Fixed in: 6.6.15<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47772<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/772e843b-00ea-45f5-b730-c9a793d4c2db<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/3cde24f3-aaad-4eb3-b6ba-a518afe66fbe<br/>
+<br/>
+Vulnerability: Slider Revolution < 6.6.16 - Authenticated (Author+) Arbitrary File Upload<br/>
+Fixed in: 6.6.16<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47784<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/e2d29afd-06e8-461a-918f-38228441a51a<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/1b841a64-fb0a-434f-b7b4-0777f0480c87<br/>
+<br/>
+Vulnerability: Slider Revolution < 6.6.19 - Author+ Insecure Deserialization leading to RCE<br/>
+Fixed in: 6.6.19<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6528<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/36ced447-84ea-4162-80d2-6df226cb53cb<br/>
+<br/>
+Vulnerability: Revslider < 6.7.0 - Authenticated (Author+) Stored Cross-Site Scripting<br/>
+Fixed in: 6.7.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2306<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/f6af1e90-9bad-470b-9e00-137000c0450c<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/8238962e-feca-4a45-b335-3c92e668c889<br/>
+<br/>
+Vulnerability: Slider Revolution < 6.7.8 - Authenticated (Author+) Stored Cross-Site Scripting via htmltag Parameter<br/>
+Fixed in: 6.7.8<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4092<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/8437abcc-3e34-4a8a-bfe2-2ff7c9f41164<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/50dd9668-c263-4bfd-8a94-00a3ad9f656d<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Warnings<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;--------<br/>
+<br/>
+Main Theme: woodmart<br/>
+The version is out of date<br/>
+Version: 7.1.4 (latest is 7.5.1)<br/>
+Style CSS: https://amomi.com.vn/wp-content/themes/woodmart/style.css<br/>
+Style URI: https://woodmart.xtemos.com/<br/>
+Author: XTemos - http://themeforest.net/user/xtemos<br/>
+<br/>
+Plugin: elementor<br/>
+The version is out of date<br/>
+Version: 3.21.0 (latest is 3.21.4)<br/>
+<br/>
+Plugin: essential-addons-for-elementor-lite<br/>
+The version is out of date<br/>
+Version: 5.8.11 (latest is 5.9.19)<br/>
+<br/>
+Plugin: revslider<br/>
+The version is out of date<br/>
+Version: 6.6.12 (latest is 6.7.9)<br/>
+<br/>
+Plugin: woocommerce<br/>
+The version could not be determined (latest is 8.8.3)<br/>
+All known vulnerabilities are listed<br/>
+<br/>
+Potential Vulnerability: WooCommerce 2.0.17 - hide-wc-extensions-message Parameter Reflected XSS<br/>
+Fixed in: 2.0.17<br/>
+References: <br/>
+- Url: https://packetstormsecurity.com/files/123684/<br/>
+- Url: https://www.securityfocus.com/bid/63228/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/6f59b2c9-1466-4c83-8967-cc1bb9b07ea6<br/>
+<br/>
+Potential Vulnerability: WooCommerce 2.0.12 - index.php calc_shipping_state Parameter XSS<br/>
+Fixed in: 2.0.13<br/>
+References: <br/>
+- Url: https://packetstormsecurity.com/files/122465/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/05600919-3d11-4539-8850-3ac8fc6fe5a9<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 2.2.3 - Reflected Cross-Site Scripting (XSS)<br/>
+Fixed in: 2.2.3<br/>
+References: <br/>
+- Url: https://seclists.org/fulldisclosure/2014/Sep/59<br/>
+- Url: https://advisories.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/a2cc949c-838f-4e47-9ee8-07e3fb3cb049<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 2.2.2 - Reflected Cross-Site Scripting (XSS)<br/>
+Fixed in: 2.2.3<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6313<br/>
+- Url: https://seclists.org/fulldisclosure/2014/Sep/59<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/1c0eced1-f1ff-475b-ba41-2d821bec5094<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 2.2.10 - Cross-Site Scripting (XSS)<br/>
+Fixed in: 2.2.11<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2069<br/>
+- Url: https://seclists.org/fulldisclosure/2015/Feb/75<br/>
+- Url: https://packetstormsecurity.com/files/130458/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/301c83b2-a326-42f5-ad27-92845716dcd3<br/>
+<br/>
+Potential Vulnerability: WooCommerce 2.3 - 2.3.5 - SQL Injection<br/>
+Fixed in: 2.3.6<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2329<br/>
+- Url: http://www.wordfence.com/blog/2015/03/woocommerce-sql-injection-vulnerability/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/7f1ab25f-4171-48a6-a67c-fa6020c7a0d6<br/>
+<br/>
+Potential Vulnerability: WooCommerce 2.0.20-2.3.10 - Object Injection / XXE<br/>
+Fixed in: 2.3.11<br/>
+References: <br/>
+- Url: https://blog.sucuri.net/2015/06/security-advisory-object-injection-vulnerability-in-woocommerce.html<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/9d4d6f49-5e02-4424-860e-f41453c9d7cf<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 2.4.8 - Authenticated Cross-Site Scripting (XSS)<br/>
+Fixed in: 2.4.9<br/>
+References: <br/>
+- Url: https://fortiguard.com/zeroday/FG-VD-15-095<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/b0761276-0a27-4a9b-96ff-faf751a5e77a<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 2.6.2 - Authenticated Cross-Site Scripting (XSS)<br/>
+Fixed in: 2.6.3<br/>
+References: <br/>
+- Url: https://woocommerce.wordpress.com/2016/07/19/woocommerce-2-6-3-fixsecurity-release-notes/<br/>
+- Url: https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_in_woocommerce_using_image_metadata__exif_.html<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/39988889-a8f4-4434-a9e9-598f926cf0b0<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 2.6.3 - Stored Cross Site Scripting (XSS) via REST API<br/>
+Fixed in: 2.6.4<br/>
+References: <br/>
+- Url: https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_in_woocommerce_wordpress_plugin.html<br/>
+- Url: https://seclists.org/fulldisclosure/2016/Sep/20<br/>
+- Url: https://hackerone.com/reports/152692<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/d4f7dff0-7391-4448-95dd-327f0803a9b8<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 2.6.8 - Authenticated Tax-Rate CSV XSS<br/>
+Fixed in: 2.6.9<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10112<br/>
+- Url: https://fortiguard.com/zeroday/FG-VD-15-020<br/>
+- Url: https://www.fortinet.com/blog/threat-research/woocommerce-tax-rates-cross-site-scripting-vulnerability2.html<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/037bf4b0-889e-4af3-8ede-efbd5f71f3e3<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.2.3 - Authenticated PHP Object Injection<br/>
+Fixed in: 3.2.4<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18356<br/>
+- Url: https://woocommerce.wordpress.com/2017/11/16/woocommerce-3-2-4-security-fix-release-notes/<br/>
+- Url: https://blog.ripstech.com/2018/woocommerce-php-object-injection/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/1d0470df-4671-47ac-8d87-a165e8f7d502<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.4.4 - Potential Object Injection<br/>
+Fixed in: 3.4.5<br/>
+References: <br/>
+- Url: https://woocommerce.wordpress.com/2018/08/29/woocommerce-3-4-5-security-fix-release-notes/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/13a534b4-97bd-48e1-b936-cc57c9c56396<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.4.5 - Authenticated Object Injection<br/>
+Fixed in: 3.4.6<br/>
+References: <br/>
+- Url: https://medium.com/websec/woocommerce-and-azis-with-scotch-bc9d561377e1<br/>
+- Url: https://github.com/woocommerce/woocommerce/commit/4738162c25bb244631574d4230533b470f0ee8df#diff-dc3a1c9d68e161cfe6566b05971ec631<br/>
+- Url: https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/b9af34f0-9012-41a1-870b-89d4e5d2eb27<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.4.5 - Authenticated File Deletion to Privilege Escalation<br/>
+Fixed in: 3.4.6<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20714<br/>
+- Url: https://blog.ripstech.com/2018/wordpress-design-flaw-leads-to-woocommerce-rce/<br/>
+- Url: https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/<br/>
+- Url: https://www.ripstech.com/php-security-calendar-2018/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/ad7f42a7-1ffb-4613-864a-6ae3249d8e10<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.4.5 - Authenticated Stored XSS<br/>
+Fixed in: 3.4.6<br/>
+References: <br/>
+- Url: https://www.ripstech.com/php-security-calendar-2018/#day-1<br/>
+- Url: https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/7275a176-d579-471a-8492-df8edbdf27de<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.4.5 - Authenticated Phar Deserialization<br/>
+Fixed in: 3.4.6<br/>
+References: <br/>
+- Url: https://www.ripstech.com/php-security-calendar-2018/#day-3<br/>
+- Url: https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/9567f575-529d-4d66-980c-73cba6726673<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.5.0 - Authenticated Stored XSS<br/>
+Fixed in: 3.5.1<br/>
+References: <br/>
+- Url: https://www.ripstech.com/php-security-calendar-2018/#Day23<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/446d5271-c32a-4298-be0d-8e2f60681a71<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.5.4 - Stored Cross-Site Scripting (XSS)<br/>
+Fixed in: 3.5.5<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9168<br/>
+- Url: https://woocommerce.wordpress.com/2019/02/20/woocommerce-3-5-5-security-fix-release/<br/>
+- Url: https://fortiguard.com/zeroday/FG-VD-19-022<br/>
+- Url: https://github.com/woocommerce/woocommerce/commit/ffa230de9091cde33f1d60ffc971533e8682ba8f<br/>
+- Url: https://github.com/woocommerce/woocommerce/commit/7def966e4fe626cca274b5a714e07ac36f2655a6<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/661a5cd0-f152-4a33-8de8-55fa9f73c8d4<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 3.6.4 - Cross-Site Request Forgery (CSRF) & File Type Check<br/>
+Fixed in: 3.6.5<br/>
+References: <br/>
+- Url: https://plugins.trac.wordpress.org/changeset?reponame=&new=2116363%40woocommerce&old=2096035%40woocommerce<br/>
+- Url: https://twitter.com/WooCommerce/status/1147543261814374401<br/>
+- Url: https://woocommerce.wordpress.com/2019/07/02/woocommerce-3-6-5-security-release/<br/>
+- Url: https://blog.ripstech.com/2019/woocommerce-csrf-to-stored-xss/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/4760a717-3f2d-4491-bfb1-ae0754c3bda5<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 4.1.0 - Unescaped Metadata when Duplicating Products<br/>
+Fixed in: 4.1.0<br/>
+References: <br/>
+- Url: https://plugins.trac.wordpress.org/browser/woocommerce/tags/4.1.0/readme.txt?rev=2298743<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/e938f544-d043-4831-888f-52d94e7c6c3d<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 4.2.1 - Potential Cross-Site Scripting (XSS) via SelectWoo<br/>
+Fixed in: 4.2.1<br/>
+References: <br/>
+- Url: https://woocommerce.wordpress.com/2020/06/22/woocommerce-4-2-1-security-and-fix-release/<br/>
+- Url: https://github.com/woocommerce/woocommerce/commit/40f7c2d474e242440b2fb9a886353f5a8772a210<br/>
+- Url: https://github.com/woocommerce/woocommerce/commit/14a26aca2cde9c81ade02bdc6dd0a34e184a4202<br/>
+- Url: https://github.com/woocommerce/selectWoo/releases/tag/1.0.7<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/8dac6eec-6573-4de0-b37f-ff09834c50bd<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 4.6.2 - Guest Account Creation<br/>
+Fixed in: 4.6.2<br/>
+References: <br/>
+- Url: https://developer.woocommerce.com/2020/11/05/developer-advisory-spam-orders-and-accounts-from-bots/<br/>
+- Url: https://github.com/woocommerce/woocommerce/commit/e711a447feaf3d6020204e4319fdd5ba47c3f0b9<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/3f3094ed-23ea-4bfb-847a-d06d8a7e7cee<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 4.7.0 - Arbitrary Order Status Disclosure via IDOR<br/>
+Fixed in: 4.7.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-29156<br/>
+- Url: https://github.com/Ko-kn3t/CVE-2020-29156<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/c420f079-5803-47ec-9844-28b0785c35f0<br/>
+<br/>
+Potential Vulnerability: Woocommerce < 5.2.0 - Authenticated Stored Cross-Site Scripting (XSS)<br/>
+Fixed in: 5.2.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24323<br/>
+- Youtube: https://www.youtube.com/watch?v=YXNYkVbaAfo<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/6d262555-7ae4-4e36-add6-4baa34dc3010<br/>
+<br/>
+Potential Vulnerability: Woocommerce 3.3 to 5.5 - Authenticated Blind SQL Injection<br/>
+Fixed in: 5.5.1<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-32790<br/>
+- Url: https://woocommerce.com/posts/critical-vulnerability-detected-july-2021/<br/>
+- Url: https://twitter.com/WooCommerce/status/1415442447312764931<br/>
+- Url: https://www.wordfence.com/blog/2021/07/critical-sql-injection-vulnerability-patched-in-woocommerce/<br/>
+- Url: https://noc.org/2021/07/15/serious-sqli-in-woocommerce/<br/>
+- Url: https://blog.wpscan.com/critical-woocommerce-vulnerabilities/<br/>
+- Url: https://github.com/woocommerce/woocommerce/security/advisories/GHSA-7vx5-x39w-q24g<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/1212fec8-1fde-41e5-af70-abdd7ffe5379<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 5.7.0  & WooCommerce Admin < 2.6.4 - Analytics Report Leaks<br/>
+Fixed in: 5.7.0<br/>
+References: <br/>
+- Url: https://developer.woocommerce.com/2021/09/22/important-security-patch-released-in-woocommerce/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/6f1ecd1e-5363-44df-b9c7-a67dc9398261<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 6.2.1 - Subscriber+ Arbitrary Comment Deletion<br/>
+Fixed in: 6.2.1<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0775<br/>
+- Url: https://plugins.trac.wordpress.org/changeset/2683324<br/>
+- Url: https://developer.woocommerce.com/2022/02/22/woocommerce-6-2-1-security-fix/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/b76dbf37-a0a2-48cf-bd85-3ebbc2f394dd<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 6.2.1 - Path Traversal via Importers<br/>
+Fixed in: 6.2.1<br/>
+References: <br/>
+- Url: https://plugins.trac.wordpress.org/changeset/2683324<br/>
+- Url: https://developer.woocommerce.com/2022/02/22/woocommerce-6-2-1-security-fix/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/26e169da-4020-4b3d-8bee-af01bd853791<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 6.3.1 - Orders Marked as Paid (via PayPal Standard Gateway)<br/>
+Fixed in: 6.3.1<br/>
+References: <br/>
+- Url: https://developer.woocommerce.com/2022/03/10/woocommerce-3-5-10-6-3-1-security-releases/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/bdda03d0-d657-4e12-8996-40152194c607<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 6.6.0 - Admin+ Stored HTML Injection<br/>
+Fixed in: 6.6.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2099<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/0316e5f3-3302-40e3-8ff4-be3423a3be7b<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 7.9 - Unauthenticated Sensitive Information Disclosure<br/>
+Fixed in: 7.9<br/>
+References: <br/>
+- Url: https://hackerone.com/reports/2057736<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/d1cec296-b5df-4cea-8c0d-d03a975cb6af<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 8.1.1 - Shop Manager+ User Metadata Disclosure<br/>
+Fixed in: 8.1.1<br/>
+References: <br/>
+- Url: https://hackerone.com/reports/1702658<br/>
+- Url: https://developer.woocommerce.com/2023/09/16/woocommerce-vulnerability-reintroduced-from-7-0-1/<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/bb9f355a-be33-41b1-af36-0a30c24bec8c<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 7.9.0 - Sensitive Information Exposure<br/>
+Fixed in: 7.9.0<br/>
+References: <br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/7b2d1879-c337-41c9-9f47-f9c2fe8e5928<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/9c9498b0-d42e-4ce0-b299-ba5d08058a75<br/>
+<br/>
+Potential Vulnerability: WooCommerce <= 8.1.1 & WooCommerce Blocks <= 11.1.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Featured Image alt Attribute<br/>
+Fixed in: 8.2.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47777<br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/525dec5b-b457-483c-ab2d-09dd320edcaa<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/b8e9b8cf-8d13-4fd8-8e1e-ee35a01baf05<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 7.0.1 - Authenticated(Shop Manager+) Sensitive Information Exposure<br/>
+Fixed in: 7.0.1<br/>
+References: <br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/f1efcff5-3af6-4c44-9654-b917523419aa<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/45f56af8-b238-41a5-b7d5-bd40982d5ed7<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 8.3.0 - Cross-Site Request Forgery<br/>
+Fixed in: 8.3.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52222<br/>
+- Url: https://patchstack.com/database/vulnerability/woocommerce/wordpress-woocommerce-plugin-8-2-2-cross-site-request-forgery-csrf-vulnerability<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/d11e7996-3417-4b1b-a090-2f4d31cdd11d<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 8.4.0 - Reflected Cross-Site Scripting<br/>
+Fixed in: 8.4.0<br/>
+References: <br/>
+- Url: https://www.wordfence.com/threat-intel/vulnerabilities/id/43810a17-89b4-44f5-887e-1ad0989ea5b4<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/0b51f01a-24d9-4101-bdcf-728b21efc5ed<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 8.6 - Contributor+ Private/Draft Products Access<br/>
+Fixed in: 8.6<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1310<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/a7735feb-876e-461c-9a56-ea6067faf277<br/>
+<br/>
+Potential Vulnerability: WooCommerce < 8.6.0 - Cross-Site Request Forgery<br/>
+Fixed in: 8.6.0<br/>
+References: <br/>
+- CVE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22155<br/>
+- Url: https://patchstack.com/database/vulnerability/woocommerce/wordpress-woocommerce-plugin-8-5-2-cross-site-request-forgery-csrf-vulnerability<br/>
+- WPVulnDB: https://wpvulndb.com/vulnerabilities/14d03287-6571-46d3-89af-0ad64dad6d33<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Informations<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;------------<br/>
+<br/>
+Wordpress version: 6.5.2 (up to date)<br/>
+Release Date: 2024-04-09<br/>
+<br/>
+Plugin: contact-form-7<br/>
+Version: 5.9.3 (up to date)<br/>
+<br/>
+Plugin: elementor-pro<br/>
+Version: 3.13.2<br/>
+<br/>
+Headers<br/>
+URL: https://amomi.com.vn/<br/>
+Interesting entries: <br/>
+- server: nginx/1.18.0 (Ubuntu)<br/>
+<br/>
+robots.txt found: https://amomi.com.vn/robots.txt<br/>
+<br/>
+XML-RPC seems to be enabled: https://amomi.com.vn/xmlrpc.php<br/>
+References: <br/>
+- Url: http://codex.wordpress.org/XML-RPC_Pingback_API<br/>
+- Metasploit: https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner<br/>
+- Metasploit: https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos<br/>
+- Metasploit: https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login<br/>
+- Metasploit: https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access<br/>
+<br/>
+WordPress readme found: https://amomi.com.vn/readme.html<br/>
+<br/>
+The external WP-Cron seems to be enabled: https://amomi.com.vn/wp-cron.php<br/>
+References: <br/>
+- Url: https://www.iplocation.net/defend-wordpress-from-ddos<br/>
+- Url: https://github.com/wpscanteam/wpscan/issues/1299<br/>
+<br/>
+WPVulnDB API<br/>
+Plan: free<br/>
+Requests: 6 done during scan, 11 remaining<br/>
+<br/>
+Scanned with WordPress Security Scanner by the WPScan Team<br/>
+Version: 3.8.25<br/>
+<br/>
+Target URL: https://amomi.com.vn/<br/>
+Target IP: 103.149.170.76<br/>
+Effective URL: https://amomi.com.vn/<br/>
+<br/>
+Scan duration: 48 seconds

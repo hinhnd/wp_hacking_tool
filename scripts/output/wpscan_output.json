@@ -1,0 +1,1485 @@
+{
+  "banner": {
+    "description": "WordPress Security Scanner by the WPScan Team",
+    "version": "3.8.25",
+    "authors": [
+      "@_WPScan_",
+      "@ethicalhack3r",
+      "@erwan_lr",
+      "@firefart"
+    ],
+    "sponsor": "Sponsored by Automattic - https://automattic.com/"
+  },
+  "start_time": 1715041424,
+  "start_memory": 65757184,
+  "target_url": "https://amomi.com.vn/",
+  "target_ip": "103.149.170.76",
+  "effective_url": "https://amomi.com.vn/",
+  "interesting_findings": [
+    {
+      "url": "https://amomi.com.vn/",
+      "to_s": "Headers",
+      "type": "headers",
+      "found_by": "Headers (Passive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+        "server: nginx/1.18.0 (Ubuntu)"
+      ]
+    },
+    {
+      "url": "https://amomi.com.vn/robots.txt",
+      "to_s": "robots.txt found: https://amomi.com.vn/robots.txt",
+      "type": "robots_txt",
+      "found_by": "Robots Txt (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "https://amomi.com.vn/xmlrpc.php",
+      "to_s": "XML-RPC seems to be enabled: https://amomi.com.vn/xmlrpc.php",
+      "type": "xmlrpc",
+      "found_by": "Link Tag (Passive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+        "Direct Access (Aggressive Detection)": {
+          "confidence": 100
+        }
+      },
+      "references": {
+        "url": [
+          "http://codex.wordpress.org/XML-RPC_Pingback_API"
+        ],
+        "metasploit": [
+          "auxiliary/scanner/http/wordpress_ghost_scanner",
+          "auxiliary/dos/http/wordpress_xmlrpc_dos",
+          "auxiliary/scanner/http/wordpress_xmlrpc_login",
+          "auxiliary/scanner/http/wordpress_pingback_access"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "https://amomi.com.vn/readme.html",
+      "to_s": "WordPress readme found: https://amomi.com.vn/readme.html",
+      "type": "readme",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "https://amomi.com.vn/wp-cron.php",
+      "to_s": "The external WP-Cron seems to be enabled: https://amomi.com.vn/wp-cron.php",
+      "type": "wp_cron",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 60,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "https://www.iplocation.net/defend-wordpress-from-ddos",
+          "https://github.com/wpscanteam/wpscan/issues/1299"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    }
+  ],
+  "version": {
+    "number": "6.5.2",
+    "release_date": "2024-04-09",
+    "status": "latest",
+    "found_by": "Rss Generator (Passive Detection)",
+    "confidence": 100,
+    "interesting_entries": [
+      "https://amomi.com.vn/feed/, <generator>https://wordpress.org/?v=6.5.2</generator>",
+      "https://amomi.com.vn/comments/feed/, <generator>https://wordpress.org/?v=6.5.2</generator>"
+    ],
+    "confirmed_by": {
+
+    },
+    "vulnerabilities": [
+
+    ]
+  },
+  "main_theme": {
+    "slug": "woodmart",
+    "location": "https://amomi.com.vn/wp-content/themes/woodmart/",
+    "latest_version": "7.5.1",
+    "last_updated": "2024-04-19T13:06:22.000Z",
+    "outdated": true,
+    "readme_url": false,
+    "directory_listing": false,
+    "error_log_url": null,
+    "style_url": "https://amomi.com.vn/wp-content/themes/woodmart/style.css",
+    "style_name": "Woodmart",
+    "style_uri": "https://woodmart.xtemos.com/",
+    "description": "ThemeForest Premium Theme",
+    "author": "XTemos",
+    "author_uri": "http://themeforest.net/user/xtemos",
+    "template": null,
+    "license": "GNU General Public License version 3.0",
+    "license_uri": "http://www.gnu.org/licenses/gpl-3.0.html",
+    "tags": "one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready",
+    "text_domain": null,
+    "found_by": "Urls In Homepage (Passive Detection)",
+    "confidence": 100,
+    "interesting_entries": [
+
+    ],
+    "confirmed_by": {
+
+    },
+    "vulnerabilities": [
+      {
+        "title": "WoodMart < 7.2.2 - Subscriber+ Stored XSS",
+        "fixed_in": "7.2.2",
+        "references": {
+          "cve": [
+            "2023-32239"
+          ],
+          "wpvulndb": [
+            "6eb2d429-1610-4068-9c51-8361c168c3a0"
+          ]
+        }
+      },
+      {
+        "title": "WoodMart < 7.2.5 - Reflected XSS",
+        "fixed_in": "7.2.5",
+        "references": {
+          "cve": [
+            "2023-41872"
+          ],
+          "url": [
+            "https://patchstack.com/database/vulnerability/woodmart/wordpress-woodmart-theme-7-2-4-reflected-cross-site-scripting-xss-vulnerability"
+          ],
+          "wpvulndb": [
+            "9253eae2-424d-4ee2-9029-012f5a76c1fd"
+          ]
+        }
+      }
+    ],
+    "version": {
+      "number": "7.1.4",
+      "confidence": 80,
+      "found_by": "Style (Passive Detection)",
+      "interesting_entries": [
+        "https://amomi.com.vn/wp-content/themes/woodmart/style.css, Match: 'Version: 7.1.4'"
+      ],
+      "confirmed_by": {
+
+      }
+    },
+    "parents": [
+
+    ]
+  },
+  "plugins": {
+    "contact-form-7": {
+      "slug": "contact-form-7",
+      "location": "https://amomi.com.vn/wp-content/plugins/contact-form-7/",
+      "latest_version": "5.9.3",
+      "last_updated": "2024-03-21T06:56:00.000Z",
+      "outdated": false,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Urls In 404 Page (Passive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+
+          ]
+        }
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "5.9.3",
+        "confidence": 80,
+        "found_by": "Readme - Stable Tag (Aggressive Detection)",
+        "interesting_entries": [
+          "https://amomi.com.vn/wp-content/plugins/contact-form-7/readme.txt"
+        ],
+        "confirmed_by": {
+
+        }
+      }
+    },
+    "elementor": {
+      "slug": "elementor",
+      "location": "https://amomi.com.vn/wp-content/plugins/elementor/",
+      "latest_version": "3.21.4",
+      "last_updated": "2024-04-30T12:32:00.000Z",
+      "outdated": true,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Urls In 404 Page (Passive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+
+          ]
+        }
+      },
+      "vulnerabilities": [
+
+      ],
+      "version": {
+        "number": "3.21.0",
+        "confidence": 100,
+        "found_by": "Javascript Comment (Aggressive Detection)",
+        "interesting_entries": [
+          "https://amomi.com.vn/wp-content/plugins/elementor/assets/js/admin-feedback.js, Match: 'elementor - v3.21.0'"
+        ],
+        "confirmed_by": {
+          "Style Comment (Aggressive Detection)": {
+            "confidence": 60,
+            "interesting_entries": [
+              "https://amomi.com.vn/wp-content/plugins/elementor/assets/css/admin.min.css, Match: 'elementor - v3.21.0'"
+            ]
+          }
+        }
+      }
+    },
+    "elementor-pro": {
+      "slug": "elementor-pro",
+      "location": "https://amomi.com.vn/wp-content/plugins/elementor-pro/",
+      "latest_version": null,
+      "last_updated": null,
+      "outdated": false,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Urls In 404 Page (Passive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+
+          ]
+        }
+      },
+      "vulnerabilities": [
+        {
+          "title": "Elementor Pro < 3.19.3 - Authenticated (Contributor+) Information Exposure",
+          "fixed_in": "3.19.3",
+          "references": {
+            "cve": [
+              "2024-23523"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/ecc8996a-d95c-4711-ac7d-523f5100c7fc"
+            ],
+            "wpvulndb": [
+              "52195b1a-31b9-46da-bed8-7fdd2c6c8c14"
+            ]
+          }
+        },
+        {
+          "title": "Elementor Website Builder Pro < 3.20.2 - Authententicated (Contributor+) Stored Cross-Site Scripting",
+          "fixed_in": "3.20.2",
+          "references": {
+            "cve": [
+              "2024-1364"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/531954dd-ed3f-4626-adab-c1bba8407c89"
+            ],
+            "wpvulndb": [
+              "d332bb66-e69c-4d11-8ff2-2c35d7ce2808"
+            ]
+          }
+        },
+        {
+          "title": "Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) DOM-Based Stored Cross-Site Scripting via video_html_tag",
+          "fixed_in": "3.20.2",
+          "references": {
+            "cve": [
+              "2024-2781"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/54970085-5206-45b6-adcf-11e6dd4cd633"
+            ],
+            "wpvulndb": [
+              "964c149d-fb08-4f86-a9a8-34a4412b5fdd"
+            ]
+          }
+        },
+        {
+          "title": "Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting",
+          "fixed_in": "3.20.2",
+          "references": {
+            "cve": [
+              "2024-2121"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/8698d6dd-7376-4d29-8a5c-21c239a7aa03"
+            ],
+            "wpvulndb": [
+              "a48b0031-02f6-4871-beb3-0f61e1cd3d28"
+            ]
+          }
+        },
+        {
+          "title": "Elementor Website Builder – More than Just a Page Builder < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Post Navigation",
+          "fixed_in": "3.20.2",
+          "references": {
+            "cve": [
+              "2024-2120"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/de1742d4-f498-4ad4-b6a1-88cb60e83afc"
+            ],
+            "wpvulndb": [
+              "ed24ea21-967a-43e3-8219-daed594c6e11"
+            ]
+          }
+        },
+        {
+          "title": "Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Form Widget SVGZ File Upload",
+          "fixed_in": "3.20.2",
+          "references": {
+            "cve": [
+              "2024-1521"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/ecd01ea6-9476-47e1-9959-3f8d9ce1c1f3"
+            ],
+            "wpvulndb": [
+              "249f4270-610c-4422-b34f-e714358fb398"
+            ]
+          }
+        },
+        {
+          "title": "Elementor Website Builder Pro < 3.21.2 - Authenticated (Contributor+) DOM-Based Stored Cross-Site Scripting",
+          "fixed_in": "3.21.2",
+          "references": {
+            "cve": [
+              "2024-4107"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/0d5d47bd-4f05-4dc7-84c1-f7bc1196ee16"
+            ],
+            "wpvulndb": [
+              "f54baf17-050d-4972-9631-3026dfb04496"
+            ]
+          }
+        }
+      ],
+      "version": {
+        "number": "3.13.2",
+        "confidence": 80,
+        "found_by": "Query Parameter (Passive Detection)",
+        "interesting_entries": [
+          "https://amomi.com.vn/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.13.2",
+          "https://amomi.com.vn/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.13.2"
+        ],
+        "confirmed_by": {
+          "Change Log (Aggressive Detection)": {
+            "confidence": 60,
+            "interesting_entries": [
+              "https://amomi.com.vn/wp-content/plugins/elementor-pro/changelog.txt, Match: '#### 3.13.2 -'"
+            ]
+          }
+        }
+      }
+    },
+    "essential-addons-for-elementor-lite": {
+      "slug": "essential-addons-for-elementor-lite",
+      "location": "https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/",
+      "latest_version": "5.9.19",
+      "last_updated": "2024-05-05T09:31:00.000Z",
+      "outdated": true,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Urls In 404 Page (Passive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+
+          ]
+        }
+      },
+      "vulnerabilities": [
+        {
+          "title": "Essential Addons for Elementor < 5.9.3 - Contributor+ Stored XSS",
+          "fixed_in": "5.9.3",
+          "references": {
+            "cve": [
+              "2023-7044"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/6e770e98-3c13-4e37-b51b-4c39bce2cb42"
+            ],
+            "wpvulndb": [
+              "10a73fea-68b4-4861-8ac1-b5ac278fed11"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.5 - Contributor+ Stored Cross-Site Scripting via Image URl",
+          "fixed_in": "5.9.5",
+          "references": {
+            "cve": [
+              "2024-0585"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/417baa1c-29f0-4fec-8008-5b52359b3328"
+            ],
+            "wpvulndb": [
+              "6955630f-29c0-4996-9184-325ea153dfcf"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.5 - Contributor+ Stored Cross-Site Scritping",
+          "fixed_in": "5.9.5",
+          "references": {
+            "cve": [
+              "2024-0586"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/c00ff4bd-d846-4e3f-95ed-2a6430c47ebf"
+            ],
+            "wpvulndb": [
+              "427af876-f60c-4219-b5de-1c72b41c0136"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.8 - Contributor+ Stored XSS",
+          "fixed_in": "5.9.8",
+          "references": {
+            "cve": [
+              "2024-0954"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/875db71d-c799-40b9-95e1-74d53046b0a9"
+            ],
+            "wpvulndb": [
+              "d6f1740c-9e31-4be1-81ff-62bfd5b568fe"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting via Filterable Gallery",
+          "fixed_in": "5.9.9",
+          "references": {
+            "cve": [
+              "2024-1171"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/fafdd087-9637-41df-bc5a-97e1a02ea744"
+            ],
+            "wpvulndb": [
+              "49240593-fb6a-4d8c-a369-c4606cd9ee24"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting via Accordion",
+          "fixed_in": "5.9.9",
+          "references": {
+            "cve": [
+              "2024-1172"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/f2ff2cc6-b584-442b-890b-033a0a047c24"
+            ],
+            "wpvulndb": [
+              "0a8dde9a-bac0-498d-a68e-466a29401a08"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting",
+          "fixed_in": "5.9.9",
+          "references": {
+            "cve": [
+              "2024-1276"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/af8bee01-15bc-485e-8b01-8b68b199b34d"
+            ],
+            "wpvulndb": [
+              "538a02f8-1aac-4f5e-ad22-7b98745be27e"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting",
+          "fixed_in": "5.9.9",
+          "references": {
+            "cve": [
+              "2024-1236"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/43014ecd-72d9-44cc-be24-c0c9790ddc20"
+            ],
+            "wpvulndb": [
+              "5e0c33f9-178d-42ca-bc5f-f1354be951e5"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.10 - Contributor+ Stored Cross-Site Scripting via Data Table",
+          "fixed_in": "5.9.10",
+          "references": {
+            "cve": [
+              "2024-1537"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/81a48c61-4191-4252-9230-9df8fc5e3443"
+            ],
+            "wpvulndb": [
+              "76499eab-5dee-4f9a-b7cf-d89d46ce5e8b"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.10 - Contributor+ Stored Cross-Site Scripting via Event Calendar",
+          "fixed_in": "5.9.10",
+          "references": {
+            "cve": [
+              "2024-1536"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/12dc9e63-17bb-4755-be3c-ae8b26edd3cd"
+            ],
+            "wpvulndb": [
+              "fc358e07-84d1-48c2-bc0a-72c399b3163c"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.12 - Contributor+ Stored XSS",
+          "fixed_in": "5.9.12",
+          "references": {
+            "cve": [
+              "2024-2650"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/7242d808-9c33-4b3f-bda6-b4b72ca37de9"
+            ],
+            "wpvulndb": [
+              "8a3c90da-f467-4795-b912-afe7c43e8258"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.12 - Contributor+ Stored XSS",
+          "fixed_in": "5.9.12",
+          "references": {
+            "cve": [
+              "2024-2623"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/baa92aee-a0a0-45d4-aa12-1449a829930c"
+            ],
+            "wpvulndb": [
+              "78d2f15c-a336-4749-bd1e-9507165061f3"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.14 - Unauthenticated Private/Draft Posts Access",
+          "fixed_in": "5.9.14",
+          "references": {
+            "cve": [
+              "2024-2974"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/78f96d7f-aeca-4959-9573-0fb6402de007"
+            ],
+            "wpvulndb": [
+              "e2aa7fa0-d9c4-4a41-9479-350ea2ba375a"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.14 - Author+ PHP Object Injection",
+          "fixed_in": "5.9.14",
+          "references": {
+            "cve": [
+              "2024-3018"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/342049e5-834e-4867-8174-01ca7bb0caa2"
+            ],
+            "wpvulndb": [
+              "1f720bb4-0018-4d46-83bb-034cb4d5c372"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor < 5.9.15 - Contributor+ Store XSS via Widget URL",
+          "fixed_in": "5.9.15",
+          "references": {
+            "cve": [
+              "2024-3333"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/aa5bdaf9-fbde-40d4-a72a-fd24489818b3"
+            ],
+            "wpvulndb": [
+              "9833f8a9-837f-4e62-9050-c6f656b873a4"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.16 - Contributor+ Stored Cross-Site Scripting",
+          "fixed_in": "5.9.16",
+          "references": {
+            "cve": [
+              "2024-4003"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/1cf3190c-e247-4bcc-99e0-2ab2d2fa0590"
+            ],
+            "wpvulndb": [
+              "de4bd46a-d2fa-48ca-8344-3d7cc30667c5"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor  < 5.9.16 - Contributor+ Stored Cross-Site Scripting ",
+          "fixed_in": "5.9.16",
+          "references": {
+            "cve": [
+              "2024-3728"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/284ea577-ff67-4681-995b-f7bb5ef0ff3e"
+            ],
+            "wpvulndb": [
+              "2c8eed37-8784-4c48-b819-e2dd4301ca20"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor  < 5.9.16 - Information Exposure",
+          "fixed_in": "5.9.16",
+          "references": {
+            "cve": [
+              "2024-3733"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/3d604f7a-947c-43f4-bba6-e7e98b2d7844"
+            ],
+            "wpvulndb": [
+              "11c8df8e-822e-402e-b94f-81d15a7dfe0a"
+            ]
+          }
+        },
+        {
+          "title": "Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.18 - Contributor+ Stored XSS",
+          "fixed_in": "5.9.18",
+          "references": {
+            "cve": [
+              "2024-4156"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/23a66e6b-cec0-4110-9bef-a5d41ce1c954"
+            ],
+            "wpvulndb": [
+              "0341204b-0260-451f-ae5c-66d3afd81f9f"
+            ]
+          }
+        }
+      ],
+      "version": {
+        "number": "5.8.11",
+        "confidence": 100,
+        "found_by": "Readme - Stable Tag (Aggressive Detection)",
+        "interesting_entries": [
+          "https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt"
+        ],
+        "confirmed_by": {
+          "Readme - ChangeLog Section (Aggressive Detection)": {
+            "confidence": 50,
+            "interesting_entries": [
+              "https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt"
+            ]
+          }
+        }
+      }
+    },
+    "revslider": {
+      "slug": "revslider",
+      "location": "https://amomi.com.vn/wp-content/plugins/revslider/",
+      "latest_version": "6.7.9",
+      "last_updated": "2024-04-30T13:53:00.000Z",
+      "outdated": true,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Urls In 404 Page (Passive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+
+          ]
+        },
+        "Meta Generator (Passive Detection)": {
+          "confidence": 40,
+          "interesting_entries": [
+
+          ]
+        }
+      },
+      "vulnerabilities": [
+        {
+          "title": "Revolution Slider <= 6.6.12 - Author+ Remote Code Execution",
+          "fixed_in": "6.6.13",
+          "references": {
+            "cve": [
+              "2023-2359"
+            ],
+            "wpvulndb": [
+              "a8350890-e6d4-4b04-a158-2b0ee3748e65"
+            ]
+          }
+        },
+        {
+          "title": "Slider Revolution < 6.6.15 - Authenticated (Contributor+) Stored Cross-Site Scripting",
+          "fixed_in": "6.6.15",
+          "references": {
+            "cve": [
+              "2023-47772"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/772e843b-00ea-45f5-b730-c9a793d4c2db"
+            ],
+            "wpvulndb": [
+              "3cde24f3-aaad-4eb3-b6ba-a518afe66fbe"
+            ]
+          }
+        },
+        {
+          "title": "Slider Revolution < 6.6.16 - Authenticated (Author+) Arbitrary File Upload",
+          "fixed_in": "6.6.16",
+          "references": {
+            "cve": [
+              "2023-47784"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/e2d29afd-06e8-461a-918f-38228441a51a"
+            ],
+            "wpvulndb": [
+              "1b841a64-fb0a-434f-b7b4-0777f0480c87"
+            ]
+          }
+        },
+        {
+          "title": "Slider Revolution < 6.6.19 - Author+ Insecure Deserialization leading to RCE",
+          "fixed_in": "6.6.19",
+          "references": {
+            "cve": [
+              "2023-6528"
+            ],
+            "wpvulndb": [
+              "36ced447-84ea-4162-80d2-6df226cb53cb"
+            ]
+          }
+        },
+        {
+          "title": "Revslider < 6.7.0 - Authenticated (Author+) Stored Cross-Site Scripting",
+          "fixed_in": "6.7.0",
+          "references": {
+            "cve": [
+              "2024-2306"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/f6af1e90-9bad-470b-9e00-137000c0450c"
+            ],
+            "wpvulndb": [
+              "8238962e-feca-4a45-b335-3c92e668c889"
+            ]
+          }
+        },
+        {
+          "title": "Slider Revolution < 6.7.8 - Authenticated (Author+) Stored Cross-Site Scripting via htmltag Parameter",
+          "fixed_in": "6.7.8",
+          "references": {
+            "cve": [
+              "2024-4092"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/8437abcc-3e34-4a8a-bfe2-2ff7c9f41164"
+            ],
+            "wpvulndb": [
+              "50dd9668-c263-4bfd-8a94-00a3ad9f656d"
+            ]
+          }
+        }
+      ],
+      "version": {
+        "number": "6.6.12",
+        "confidence": 100,
+        "found_by": "Meta Generator (Passive Detection)",
+        "interesting_entries": [
+          "https://amomi.com.vn/, Match: 'Powered by Slider Revolution 6.6.12'"
+        ],
+        "confirmed_by": {
+          "Release Log (Aggressive Detection)": {
+            "confidence": 80,
+            "interesting_entries": [
+              "https://amomi.com.vn/wp-content/plugins/revslider/release_log.html, Match: 'Version 6.6.12 (29th March 2023)'"
+            ]
+          }
+        }
+      }
+    },
+    "woocommerce": {
+      "slug": "woocommerce",
+      "location": "https://amomi.com.vn/wp-content/plugins/woocommerce/",
+      "latest_version": "8.8.3",
+      "last_updated": "2024-04-30T11:42:00.000Z",
+      "outdated": false,
+      "readme_url": null,
+      "directory_listing": null,
+      "error_log_url": null,
+      "found_by": "Urls In Homepage (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Urls In 404 Page (Passive Detection)": {
+          "confidence": 80,
+          "interesting_entries": [
+
+          ]
+        }
+      },
+      "vulnerabilities": [
+        {
+          "title": "WooCommerce 2.0.17 - hide-wc-extensions-message Parameter Reflected XSS",
+          "fixed_in": "2.0.17",
+          "references": {
+            "url": [
+              "https://packetstormsecurity.com/files/123684/",
+              "https://www.securityfocus.com/bid/63228/"
+            ],
+            "wpvulndb": [
+              "6f59b2c9-1466-4c83-8967-cc1bb9b07ea6"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce 2.0.12 - index.php calc_shipping_state Parameter XSS",
+          "fixed_in": "2.0.13",
+          "references": {
+            "url": [
+              "https://packetstormsecurity.com/files/122465/"
+            ],
+            "wpvulndb": [
+              "05600919-3d11-4539-8850-3ac8fc6fe5a9"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 2.2.3 - Reflected Cross-Site Scripting (XSS)",
+          "fixed_in": "2.2.3",
+          "references": {
+            "url": [
+              "https://seclists.org/fulldisclosure/2014/Sep/59",
+              "https://advisories.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/"
+            ],
+            "wpvulndb": [
+              "a2cc949c-838f-4e47-9ee8-07e3fb3cb049"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 2.2.2 - Reflected Cross-Site Scripting (XSS)",
+          "fixed_in": "2.2.3",
+          "references": {
+            "cve": [
+              "2014-6313"
+            ],
+            "url": [
+              "https://seclists.org/fulldisclosure/2014/Sep/59"
+            ],
+            "wpvulndb": [
+              "1c0eced1-f1ff-475b-ba41-2d821bec5094"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 2.2.10 - Cross-Site Scripting (XSS)",
+          "fixed_in": "2.2.11",
+          "references": {
+            "cve": [
+              "2015-2069"
+            ],
+            "url": [
+              "https://seclists.org/fulldisclosure/2015/Feb/75",
+              "https://packetstormsecurity.com/files/130458/"
+            ],
+            "wpvulndb": [
+              "301c83b2-a326-42f5-ad27-92845716dcd3"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce 2.3 - 2.3.5 - SQL Injection",
+          "fixed_in": "2.3.6",
+          "references": {
+            "cve": [
+              "2015-2329"
+            ],
+            "url": [
+              "http://www.wordfence.com/blog/2015/03/woocommerce-sql-injection-vulnerability/"
+            ],
+            "wpvulndb": [
+              "7f1ab25f-4171-48a6-a67c-fa6020c7a0d6"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce 2.0.20-2.3.10 - Object Injection / XXE",
+          "fixed_in": "2.3.11",
+          "references": {
+            "url": [
+              "https://blog.sucuri.net/2015/06/security-advisory-object-injection-vulnerability-in-woocommerce.html"
+            ],
+            "wpvulndb": [
+              "9d4d6f49-5e02-4424-860e-f41453c9d7cf"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 2.4.8 - Authenticated Cross-Site Scripting (XSS)",
+          "fixed_in": "2.4.9",
+          "references": {
+            "url": [
+              "https://fortiguard.com/zeroday/FG-VD-15-095"
+            ],
+            "wpvulndb": [
+              "b0761276-0a27-4a9b-96ff-faf751a5e77a"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 2.6.2 - Authenticated Cross-Site Scripting (XSS)",
+          "fixed_in": "2.6.3",
+          "references": {
+            "url": [
+              "https://woocommerce.wordpress.com/2016/07/19/woocommerce-2-6-3-fixsecurity-release-notes/",
+              "https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_in_woocommerce_using_image_metadata__exif_.html"
+            ],
+            "wpvulndb": [
+              "39988889-a8f4-4434-a9e9-598f926cf0b0"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 2.6.3 - Stored Cross Site Scripting (XSS) via REST API",
+          "fixed_in": "2.6.4",
+          "references": {
+            "url": [
+              "https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_in_woocommerce_wordpress_plugin.html",
+              "https://seclists.org/fulldisclosure/2016/Sep/20",
+              "https://hackerone.com/reports/152692"
+            ],
+            "wpvulndb": [
+              "d4f7dff0-7391-4448-95dd-327f0803a9b8"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 2.6.8 - Authenticated Tax-Rate CSV XSS",
+          "fixed_in": "2.6.9",
+          "references": {
+            "cve": [
+              "2016-10112"
+            ],
+            "url": [
+              "https://fortiguard.com/zeroday/FG-VD-15-020",
+              "https://www.fortinet.com/blog/threat-research/woocommerce-tax-rates-cross-site-scripting-vulnerability2.html"
+            ],
+            "wpvulndb": [
+              "037bf4b0-889e-4af3-8ede-efbd5f71f3e3"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.2.3 - Authenticated PHP Object Injection",
+          "fixed_in": "3.2.4",
+          "references": {
+            "cve": [
+              "2017-18356"
+            ],
+            "url": [
+              "https://woocommerce.wordpress.com/2017/11/16/woocommerce-3-2-4-security-fix-release-notes/",
+              "https://blog.ripstech.com/2018/woocommerce-php-object-injection/"
+            ],
+            "wpvulndb": [
+              "1d0470df-4671-47ac-8d87-a165e8f7d502"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.4.4 - Potential Object Injection",
+          "fixed_in": "3.4.5",
+          "references": {
+            "url": [
+              "https://woocommerce.wordpress.com/2018/08/29/woocommerce-3-4-5-security-fix-release-notes/"
+            ],
+            "wpvulndb": [
+              "13a534b4-97bd-48e1-b936-cc57c9c56396"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.4.5 - Authenticated Object Injection",
+          "fixed_in": "3.4.6",
+          "references": {
+            "url": [
+              "https://medium.com/websec/woocommerce-and-azis-with-scotch-bc9d561377e1",
+              "https://github.com/woocommerce/woocommerce/commit/4738162c25bb244631574d4230533b470f0ee8df#diff-dc3a1c9d68e161cfe6566b05971ec631",
+              "https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/"
+            ],
+            "wpvulndb": [
+              "b9af34f0-9012-41a1-870b-89d4e5d2eb27"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.4.5 - Authenticated File Deletion to Privilege Escalation",
+          "fixed_in": "3.4.6",
+          "references": {
+            "cve": [
+              "2018-20714"
+            ],
+            "url": [
+              "https://blog.ripstech.com/2018/wordpress-design-flaw-leads-to-woocommerce-rce/",
+              "https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/",
+              "https://www.ripstech.com/php-security-calendar-2018/"
+            ],
+            "wpvulndb": [
+              "ad7f42a7-1ffb-4613-864a-6ae3249d8e10"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.4.5 - Authenticated Stored XSS",
+          "fixed_in": "3.4.6",
+          "references": {
+            "url": [
+              "https://www.ripstech.com/php-security-calendar-2018/#day-1",
+              "https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/"
+            ],
+            "wpvulndb": [
+              "7275a176-d579-471a-8492-df8edbdf27de"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.4.5 - Authenticated Phar Deserialization",
+          "fixed_in": "3.4.6",
+          "references": {
+            "url": [
+              "https://www.ripstech.com/php-security-calendar-2018/#day-3",
+              "https://woocommerce.wordpress.com/2018/10/11/woocommerce-3-4-6-security-fix-release-notes/"
+            ],
+            "wpvulndb": [
+              "9567f575-529d-4d66-980c-73cba6726673"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.5.0 - Authenticated Stored XSS",
+          "fixed_in": "3.5.1",
+          "references": {
+            "url": [
+              "https://www.ripstech.com/php-security-calendar-2018/#Day23"
+            ],
+            "wpvulndb": [
+              "446d5271-c32a-4298-be0d-8e2f60681a71"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.5.4 - Stored Cross-Site Scripting (XSS)",
+          "fixed_in": "3.5.5",
+          "references": {
+            "cve": [
+              "2019-9168"
+            ],
+            "url": [
+              "https://woocommerce.wordpress.com/2019/02/20/woocommerce-3-5-5-security-fix-release/",
+              "https://fortiguard.com/zeroday/FG-VD-19-022",
+              "https://github.com/woocommerce/woocommerce/commit/ffa230de9091cde33f1d60ffc971533e8682ba8f",
+              "https://github.com/woocommerce/woocommerce/commit/7def966e4fe626cca274b5a714e07ac36f2655a6"
+            ],
+            "wpvulndb": [
+              "661a5cd0-f152-4a33-8de8-55fa9f73c8d4"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 3.6.4 - Cross-Site Request Forgery (CSRF) & File Type Check",
+          "fixed_in": "3.6.5",
+          "references": {
+            "url": [
+              "https://plugins.trac.wordpress.org/changeset?reponame=&new=2116363%40woocommerce&old=2096035%40woocommerce",
+              "https://twitter.com/WooCommerce/status/1147543261814374401",
+              "https://woocommerce.wordpress.com/2019/07/02/woocommerce-3-6-5-security-release/",
+              "https://blog.ripstech.com/2019/woocommerce-csrf-to-stored-xss/"
+            ],
+            "wpvulndb": [
+              "4760a717-3f2d-4491-bfb1-ae0754c3bda5"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 4.1.0 - Unescaped Metadata when Duplicating Products",
+          "fixed_in": "4.1.0",
+          "references": {
+            "url": [
+              "https://plugins.trac.wordpress.org/browser/woocommerce/tags/4.1.0/readme.txt?rev=2298743"
+            ],
+            "wpvulndb": [
+              "e938f544-d043-4831-888f-52d94e7c6c3d"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 4.2.1 - Potential Cross-Site Scripting (XSS) via SelectWoo",
+          "fixed_in": "4.2.1",
+          "references": {
+            "url": [
+              "https://woocommerce.wordpress.com/2020/06/22/woocommerce-4-2-1-security-and-fix-release/",
+              "https://github.com/woocommerce/woocommerce/commit/40f7c2d474e242440b2fb9a886353f5a8772a210",
+              "https://github.com/woocommerce/woocommerce/commit/14a26aca2cde9c81ade02bdc6dd0a34e184a4202",
+              "https://github.com/woocommerce/selectWoo/releases/tag/1.0.7"
+            ],
+            "wpvulndb": [
+              "8dac6eec-6573-4de0-b37f-ff09834c50bd"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 4.6.2 - Guest Account Creation",
+          "fixed_in": "4.6.2",
+          "references": {
+            "url": [
+              "https://developer.woocommerce.com/2020/11/05/developer-advisory-spam-orders-and-accounts-from-bots/",
+              "https://github.com/woocommerce/woocommerce/commit/e711a447feaf3d6020204e4319fdd5ba47c3f0b9"
+            ],
+            "wpvulndb": [
+              "3f3094ed-23ea-4bfb-847a-d06d8a7e7cee"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 4.7.0 - Arbitrary Order Status Disclosure via IDOR",
+          "fixed_in": "4.7.0",
+          "references": {
+            "cve": [
+              "2020-29156"
+            ],
+            "url": [
+              "https://github.com/Ko-kn3t/CVE-2020-29156"
+            ],
+            "wpvulndb": [
+              "c420f079-5803-47ec-9844-28b0785c35f0"
+            ]
+          }
+        },
+        {
+          "title": "Woocommerce < 5.2.0 - Authenticated Stored Cross-Site Scripting (XSS)",
+          "fixed_in": "5.2.0",
+          "references": {
+            "cve": [
+              "2021-24323"
+            ],
+            "youtube": [
+              "https://www.youtube.com/watch?v=YXNYkVbaAfo"
+            ],
+            "wpvulndb": [
+              "6d262555-7ae4-4e36-add6-4baa34dc3010"
+            ]
+          }
+        },
+        {
+          "title": "Woocommerce 3.3 to 5.5 - Authenticated Blind SQL Injection",
+          "fixed_in": "5.5.1",
+          "references": {
+            "cve": [
+              "2021-32790"
+            ],
+            "url": [
+              "https://woocommerce.com/posts/critical-vulnerability-detected-july-2021/",
+              "https://twitter.com/WooCommerce/status/1415442447312764931",
+              "https://www.wordfence.com/blog/2021/07/critical-sql-injection-vulnerability-patched-in-woocommerce/",
+              "https://noc.org/2021/07/15/serious-sqli-in-woocommerce/",
+              "https://blog.wpscan.com/critical-woocommerce-vulnerabilities/",
+              "https://github.com/woocommerce/woocommerce/security/advisories/GHSA-7vx5-x39w-q24g"
+            ],
+            "wpvulndb": [
+              "1212fec8-1fde-41e5-af70-abdd7ffe5379"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 5.7.0  & WooCommerce Admin < 2.6.4 - Analytics Report Leaks",
+          "fixed_in": "5.7.0",
+          "references": {
+            "url": [
+              "https://developer.woocommerce.com/2021/09/22/important-security-patch-released-in-woocommerce/"
+            ],
+            "wpvulndb": [
+              "6f1ecd1e-5363-44df-b9c7-a67dc9398261"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 6.2.1 - Subscriber+ Arbitrary Comment Deletion",
+          "fixed_in": "6.2.1",
+          "references": {
+            "cve": [
+              "2022-0775"
+            ],
+            "url": [
+              "https://plugins.trac.wordpress.org/changeset/2683324",
+              "https://developer.woocommerce.com/2022/02/22/woocommerce-6-2-1-security-fix/"
+            ],
+            "wpvulndb": [
+              "b76dbf37-a0a2-48cf-bd85-3ebbc2f394dd"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 6.2.1 - Path Traversal via Importers",
+          "fixed_in": "6.2.1",
+          "references": {
+            "url": [
+              "https://plugins.trac.wordpress.org/changeset/2683324",
+              "https://developer.woocommerce.com/2022/02/22/woocommerce-6-2-1-security-fix/"
+            ],
+            "wpvulndb": [
+              "26e169da-4020-4b3d-8bee-af01bd853791"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 6.3.1 - Orders Marked as Paid (via PayPal Standard Gateway)",
+          "fixed_in": "6.3.1",
+          "references": {
+            "url": [
+              "https://developer.woocommerce.com/2022/03/10/woocommerce-3-5-10-6-3-1-security-releases/"
+            ],
+            "wpvulndb": [
+              "bdda03d0-d657-4e12-8996-40152194c607"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 6.6.0 - Admin+ Stored HTML Injection",
+          "fixed_in": "6.6.0",
+          "references": {
+            "cve": [
+              "2022-2099"
+            ],
+            "wpvulndb": [
+              "0316e5f3-3302-40e3-8ff4-be3423a3be7b"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 7.9 - Unauthenticated Sensitive Information Disclosure",
+          "fixed_in": "7.9",
+          "references": {
+            "url": [
+              "https://hackerone.com/reports/2057736"
+            ],
+            "wpvulndb": [
+              "d1cec296-b5df-4cea-8c0d-d03a975cb6af"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 8.1.1 - Shop Manager+ User Metadata Disclosure",
+          "fixed_in": "8.1.1",
+          "references": {
+            "url": [
+              "https://hackerone.com/reports/1702658",
+              "https://developer.woocommerce.com/2023/09/16/woocommerce-vulnerability-reintroduced-from-7-0-1/"
+            ],
+            "wpvulndb": [
+              "bb9f355a-be33-41b1-af36-0a30c24bec8c"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 7.9.0 - Sensitive Information Exposure",
+          "fixed_in": "7.9.0",
+          "references": {
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/7b2d1879-c337-41c9-9f47-f9c2fe8e5928"
+            ],
+            "wpvulndb": [
+              "9c9498b0-d42e-4ce0-b299-ba5d08058a75"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce <= 8.1.1 & WooCommerce Blocks <= 11.1.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Featured Image alt Attribute",
+          "fixed_in": "8.2.0",
+          "references": {
+            "cve": [
+              "2023-47777"
+            ],
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/525dec5b-b457-483c-ab2d-09dd320edcaa"
+            ],
+            "wpvulndb": [
+              "b8e9b8cf-8d13-4fd8-8e1e-ee35a01baf05"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 7.0.1 - Authenticated(Shop Manager+) Sensitive Information Exposure",
+          "fixed_in": "7.0.1",
+          "references": {
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/f1efcff5-3af6-4c44-9654-b917523419aa"
+            ],
+            "wpvulndb": [
+              "45f56af8-b238-41a5-b7d5-bd40982d5ed7"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 8.3.0 - Cross-Site Request Forgery",
+          "fixed_in": "8.3.0",
+          "references": {
+            "cve": [
+              "2023-52222"
+            ],
+            "url": [
+              "https://patchstack.com/database/vulnerability/woocommerce/wordpress-woocommerce-plugin-8-2-2-cross-site-request-forgery-csrf-vulnerability"
+            ],
+            "wpvulndb": [
+              "d11e7996-3417-4b1b-a090-2f4d31cdd11d"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 8.4.0 - Reflected Cross-Site Scripting",
+          "fixed_in": "8.4.0",
+          "references": {
+            "url": [
+              "https://www.wordfence.com/threat-intel/vulnerabilities/id/43810a17-89b4-44f5-887e-1ad0989ea5b4"
+            ],
+            "wpvulndb": [
+              "0b51f01a-24d9-4101-bdcf-728b21efc5ed"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 8.6 - Contributor+ Private/Draft Products Access",
+          "fixed_in": "8.6",
+          "references": {
+            "cve": [
+              "2024-1310"
+            ],
+            "wpvulndb": [
+              "a7735feb-876e-461c-9a56-ea6067faf277"
+            ]
+          }
+        },
+        {
+          "title": "WooCommerce < 8.6.0 - Cross-Site Request Forgery",
+          "fixed_in": "8.6.0",
+          "references": {
+            "cve": [
+              "2024-22155"
+            ],
+            "url": [
+              "https://patchstack.com/database/vulnerability/woocommerce/wordpress-woocommerce-plugin-8-5-2-cross-site-request-forgery-csrf-vulnerability"
+            ],
+            "wpvulndb": [
+              "14d03287-6571-46d3-89af-0ad64dad6d33"
+            ]
+          }
+        }
+      ],
+      "version": null
+    }
+  },
+  "config_backups": {
+
+  },
+  "vuln_api": {
+    "plan": "free",
+    "requests_done_during_scan": 6,
+    "requests_remaining": 11
+  },
+  "stop_time": 1715041472,
+  "elapsed": 48,
+  "requests_done": 176,
+  "cached_requests": 36,
+  "data_sent": 46019,
+  "data_sent_humanised": "44.94 KB",
+  "data_received": 781476,
+  "data_received_humanised": "763.16 KB",
+  "used_memory": 265543680,
+  "used_memory_humanised": "253.242 MB"
+}

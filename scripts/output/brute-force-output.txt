@@ -1,0 +1,203 @@
+Scanning for open ports on amomi.com.vn...
+Starting FTP brute force...
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-05-07 07:24:46
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 25 login tries (l:5/p:5), ~2 tries per task
+[DATA] attacking ftp://amomi.com.vn:21/
+0 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-05-07 07:25:19
+Starting SSH brute force...
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-05-07 07:25:19
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 25 login tries (l:5/p:5), ~2 tries per task
+[DATA] attacking ssh://amomi.com.vn:22/
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-05-07 07:25:27
+Starting MySQL brute force...
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-05-07 07:25:27
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 25 login tries (l:5/p:5), ~7 tries per task
+[DATA] attacking mysql://amomi.com.vn:3306/
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-05-07 07:25:30
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.25
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: https://amomi.com.vn/ [103.149.170.76]
+[32m[+][0m Started: Tue May  7 07:25:40 2024
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entry: server: nginx/1.18.0 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m robots.txt found: https://amomi.com.vn/robots.txt
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: https://amomi.com.vn/xmlrpc.php
+ | Found By: Link Tag (Passive Detection)
+ | Confidence: 100%
+ | Confirmed By: Direct Access (Aggressive Detection), 100% confidence
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: https://amomi.com.vn/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://amomi.com.vn/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 6.5.2 identified (Latest, released on 2024-04-09).
+ | Found By: Rss Generator (Passive Detection)
+ |  - https://amomi.com.vn/feed/, <generator>https://wordpress.org/?v=6.5.2</generator>
+ |  - https://amomi.com.vn/comments/feed/, <generator>https://wordpress.org/?v=6.5.2</generator>
+
+[32m[+][0m WordPress theme in use: woodmart
+ | Location: https://amomi.com.vn/wp-content/themes/woodmart/
+ | Last Updated: 2024-04-19T13:06:22.000Z
+ | [33m[!][0m The version is out of date, the latest version is 7.5.1
+ | Style URL: https://amomi.com.vn/wp-content/themes/woodmart/style.css
+ | Style Name: Woodmart
+ | Style URI: https://woodmart.xtemos.com/
+ | Description: ThemeForest Premium Theme...
+ | Author: XTemos
+ | Author URI: http://themeforest.net/user/xtemos
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 7.1.4 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://amomi.com.vn/wp-content/themes/woodmart/style.css, Match: 'Version: 7.1.4'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+[32m[+][0m Checking Plugin Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m contact-form-7
+ | Location: https://amomi.com.vn/wp-content/plugins/contact-form-7/
+ | Latest Version: 5.9.3 (up to date)
+ | Last Updated: 2024-03-21T06:56:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 5.9.3 (80% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/contact-form-7/readme.txt
+
+[32m[+][0m elementor
+ | Location: https://amomi.com.vn/wp-content/plugins/elementor/
+ | Last Updated: 2024-04-30T12:32:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 3.21.4
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 3.21.0 (100% confidence)
+ | Found By: Javascript Comment (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/elementor/assets/js/admin-feedback.js, Match: 'elementor - v3.21.0'
+ | Confirmed By: Style Comment (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/elementor/assets/css/admin.min.css, Match: 'elementor - v3.21.0'
+
+[32m[+][0m elementor-pro
+ | Location: https://amomi.com.vn/wp-content/plugins/elementor-pro/
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 3.13.2 (80% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.13.2
+ |  - https://amomi.com.vn/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.13.2
+ | Confirmed By: Change Log (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/elementor-pro/changelog.txt, Match: '#### 3.13.2 -'
+
+[32m[+][0m essential-addons-for-elementor-lite
+ | Location: https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/
+ | Last Updated: 2024-04-30T12:33:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 5.9.18
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 5.8.11 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt
+
+[32m[+][0m revslider
+ | Location: https://amomi.com.vn/wp-content/plugins/revslider/
+ | Last Updated: 2024-04-30T13:53:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 6.7.9
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By:
+ |  Urls In 404 Page (Passive Detection)
+ |  Meta Generator (Passive Detection)
+ |
+ | Version: 6.6.12 (100% confidence)
+ | Found By: Meta Generator (Passive Detection)
+ |  - https://amomi.com.vn/, Match: 'Powered by Slider Revolution 6.6.12'
+ | Confirmed By: Release Log (Aggressive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/revslider/release_log.html, Match: 'Version 6.6.12 (29th March 2023)'
+
+[32m[+][0m woocommerce
+ | Location: https://amomi.com.vn/wp-content/plugins/woocommerce/
+ | Latest Version: 8.8.3
+ | Last Updated: 2024-04-30T11:42:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | The version could not be determined.
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |======================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m Performing password attack on Xmlrpc against 5 user/s
+
+Progress: |========================================================|
+
+[34m[i][0m No Valid Passwords Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Tue May  7 07:26:41 2024
+[32m[+][0m Requests Done: 222
+[32m[+][0m Cached Requests: 5
+[32m[+][0m Data Sent: 63.326 KB
+[32m[+][0m Data Received: 2.176 MB
+[32m[+][0m Memory used: 287.699 MB
+[32m[+][0m Elapsed time: 00:01:00

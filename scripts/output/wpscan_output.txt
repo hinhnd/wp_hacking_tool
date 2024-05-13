@@ -1,0 +1,688 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.25
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: https://amomi.com.vn/ [103.149.170.76]
+[32m[+][0m Started: Tue May  7 07:22:22 2024
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entry: server: nginx/1.18.0 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m robots.txt found: https://amomi.com.vn/robots.txt
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: https://amomi.com.vn/xmlrpc.php
+ | Found By: Link Tag (Passive Detection)
+ | Confidence: 100%
+ | Confirmed By: Direct Access (Aggressive Detection), 100% confidence
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: https://amomi.com.vn/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://amomi.com.vn/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 6.5.2 identified (Latest, released on 2024-04-09).
+ | Found By: Rss Generator (Passive Detection)
+ |  - https://amomi.com.vn/feed/, <generator>https://wordpress.org/?v=6.5.2</generator>
+ |  - https://amomi.com.vn/comments/feed/, <generator>https://wordpress.org/?v=6.5.2</generator>
+
+[32m[+][0m WordPress theme in use: woodmart
+ | Location: https://amomi.com.vn/wp-content/themes/woodmart/
+ | Last Updated: 2024-04-19T13:06:22.000Z
+ | [33m[!][0m The version is out of date, the latest version is 7.5.1
+ | Style URL: https://amomi.com.vn/wp-content/themes/woodmart/style.css
+ | Style Name: Woodmart
+ | Style URI: https://woodmart.xtemos.com/
+ | Description: ThemeForest Premium Theme...
+ | Author: XTemos
+ | Author URI: http://themeforest.net/user/xtemos
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | [31m[!][0m 2 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: WoodMart < 7.2.2 - Subscriber+ Stored XSS
+ |     Fixed in: 7.2.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/6eb2d429-1610-4068-9c51-8361c168c3a0
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32239
+ |
+ | [31m[!][0m Title: WoodMart < 7.2.5 - Reflected XSS
+ |     Fixed in: 7.2.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/9253eae2-424d-4ee2-9029-012f5a76c1fd
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-41872
+ |      - https://patchstack.com/database/vulnerability/woodmart/wordpress-woodmart-theme-7-2-4-reflected-cross-site-scripting-xss-vulnerability
+ |
+ | Version: 7.1.4 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://amomi.com.vn/wp-content/themes/woodmart/style.css, Match: 'Version: 7.1.4'
+
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m contact-form-7
+ | Location: https://amomi.com.vn/wp-content/plugins/contact-form-7/
+ | Latest Version: 5.9.3
+ | Last Updated: 2024-03-21T06:56:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | [31m[!][0m 6 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: Contact Form 7 <= 3.7.1 - CAPTCHA Bypass 
+ |     Fixed in: 3.7.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/3020e3f1-162f-48f9-ace3-7ba1c7c6b164
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2265
+ |      - https://www.securityfocus.com/bid/66381/
+ |
+ | [31m[!][0m Title: Contact Form 7 <= 3.5.2 - File Upload Remote Code Execution
+ |     Fixed in: 3.5.3
+ |     References:
+ |      - https://wpscan.com/vulnerability/f307ec17-da98-424f-b784-7cb63351aa8e
+ |      - https://packetstormsecurity.com/files/124154/
+ |
+ | [31m[!][0m Title: Contact Form 7 <= 5.0.3 - register_post_type() Privilege Escalation
+ |     Fixed in: 5.0.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/af945f64-9ce2-485c-bf36-c2ff59dc10d5
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20979
+ |      - https://contactform7.com/2018/09/04/contact-form-7-504/
+ |      - https://plugins.trac.wordpress.org/changeset/1935726/contact-form-7
+ |      - https://plugins.trac.wordpress.org/changeset/1934594/contact-form-7
+ |      - https://plugins.trac.wordpress.org/changeset/1934343/contact-form-7
+ |      - https://plugins.trac.wordpress.org/changeset/1934327/contact-form-7
+ |      - https://www.ripstech.com/php-security-calendar-2018/#day-18
+ |
+ | [31m[!][0m Title: Contact Form 7 < 5.3.2 - Unrestricted File Upload
+ |     Fixed in: 5.3.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/7391118e-eef5-4ff8-a8ea-f6b65f442c63
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-35489
+ |      - https://www.getastra.com/blog/911/plugin-exploit/contact-form-7-unrestricted-file-upload-vulnerability/
+ |      - https://www.jinsonvarghese.com/unrestricted-file-upload-in-contact-form-7/
+ |      - https://contactform7.com/2020/12/17/contact-form-7-532/#more-38314
+ |
+ | [31m[!][0m Title: Contact Form 7 < 5.8.4 - Authenticated (Editor+) Arbitrary File Upload
+ |     Fixed in: 5.8.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/70e21d9a-b1e6-4083-bcd3-7c1c13fd5382
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6449
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d7fb020-6acb-445e-a46b-bdb5aaf8f2b6
+ |
+ | [31m[!][0m Title: Contact Form 7 < 5.9.2 - Reflected Cross-Site Scripting
+ |     Fixed in: 5.9.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/1c070a2c-2ab0-43bf-b10b-6575709918bc
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2242
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/d5bf4972-424a-4470-a0bc-7dcc95378e0e
+ |
+ | The version could not be determined.
+
+[32m[+][0m elementor
+ | Location: https://amomi.com.vn/wp-content/plugins/elementor/
+ | Latest Version: 3.21.4
+ | Last Updated: 2024-04-30T12:32:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | [31m[!][0m 28 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: Elementor Page Builder < 1.8.0 - Authenticated Unrestricted Editing
+ |     Fixed in: 1.8.0
+ |     References:
+ |      - https://wpscan.com/vulnerability/380cdc06-642d-4086-9ad6-d4bdbd305e71
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-18596
+ |      - https://www.pritect.net/blog/elementor-page-builder-1-8-allows-logged-users-unrestricted-editing
+ |
+ | [31m[!][0m Title: Elementor Page Builder < 2.8.5 - Authenticated Reflected XSS
+ |     Fixed in: 2.8.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/e1422824-adba-4d7c-a7f3-c0a6b3ab0232
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8426
+ |      - https://blog.impenetrable.tech/xss-in-wordpress-elementor-plugin
+ |
+ | [31m[!][0m Title: Elementor Page Builder < 2.7.7 - Authenticated Stored XSS
+ |     Fixed in: 2.7.7
+ |     References:
+ |      - https://wpscan.com/vulnerability/2bcf7eb7-cddb-4d6a-8789-43dd3dff4dcf
+ |      - https://labs.sucuri.net/stored-xss-in-elementor/
+ |
+ | [31m[!][0m Title: Elementor Page Builder < 2.9.6 - Authenticated Safe Mode Privilege Escalation
+ |     Fixed in: 2.9.6
+ |     References:
+ |      - https://wpscan.com/vulnerability/7120f212-0c04-4c41-b6a8-32a380c0c25d
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-20634
+ |      - https://blog.nintechnet.com/wordpress-elementor-plugin-fixed-safe-mode-privilege-escalation-vulnerability/
+ |      - https://github.com/elementor/elementor/commit/2204e9ecb02a764e4e4fed49f28d8af7534b9392
+ |
+ | [31m[!][0m Title: Elementor < 2.9.8 - SVG Sanitizer Bypass leading to Authenticated Stored XSS
+ |     Fixed in: 2.9.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/e601fc58-97a0-4a67-8955-abf0e37e74ae
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-36703
+ |      - https://blog.nintechnet.com/wordpress-elementor-plugin-fixed-svg-xss-protection-bypass-vulnerability/
+ |
+ | [31m[!][0m Title: Elementor < 2.7.5 - Authenticated Arbitrary File Upload
+ |     Fixed in: 2.7.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/3b7e04de-e23f-4cf9-a9bf-2cf4cbc8c538
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7055
+ |      - https://pentest.co.uk/labs/advisory/cve-2020-7055/
+ |      - https://pentest.co.uk/labs/vulnerability-disclosure-cve-2020-7055/
+ |      - https://www.youtube.com/watch?v=3MYygBMisQs
+ |
+ | [31m[!][0m Title: Elementor Page Builder < 2.9.10 - Authenticated Stored XSS
+ |     Fixed in: 2.9.10
+ |     References:
+ |      - https://wpscan.com/vulnerability/31659b56-2046-4be8-887f-a016da138595
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13864
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13865
+ |      - https://www.softwaresecured.com/elementor-page-builder-stored-xss/
+ |
+ | [31m[!][0m Title: Elementor < 2.9.14 - Authenticated Stored Cross-Site Scripting
+ |     Fixed in: 2.9.14
+ |     References:
+ |      - https://wpscan.com/vulnerability/7dfde62f-f167-403b-8b23-f4ac845ac04d
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15020
+ |      - http://hidden-one.co.in/2020/07/07/cve-2020-1020-stored-xss-on-elementor-wordpress-plugin/
+ |
+ | [31m[!][0m Title: Elementor < 3.0.14 - SVG Upload Allowed by Default
+ |     Fixed in: 3.0.14
+ |     References:
+ |      - https://wpscan.com/vulnerability/5c5f44e1-c00b-4a90-a581-ef06765b7f66
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-36171
+ |
+ | [31m[!][0m Title: Elementor Page Builder < 2.8.4 - Cross-Site Scripting (XSS)
+ |     Fixed in: 2.8.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/6503bdfa-013a-4172-8e3f-ea99444f1eca
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7109
+ |      - https://github.com/elementor/elementor/commit/a31dcf4ee1d18b58feef3e59fabb79976c11d0b8
+ |
+ | [31m[!][0m Title: Elementor < 3.1.4 - Authenticated Stored Cross-Site Scripting (XSS) in Column Element
+ |     Fixed in: 3.1.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/9647f516-b130-4cc8-85fb-2e69b034ced0
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24201
+ |      - https://www.wordfence.com/blog/2021/03/cross-site-scripting-vulnerabilities-in-elementor-impact-over-7-million-sites/
+ |
+ | [31m[!][0m Title: Elementor < 3.1.4 - Authenticated Stored Cross-Site Scripting (XSS) in Heading Widget
+ |     Fixed in: 3.1.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/b72bd13d-c8e2-4347-b009-542fc0fe21bb
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24202
+ |      - https://www.wordfence.com/blog/2021/03/cross-site-scripting-vulnerabilities-in-elementor-impact-over-7-million-sites/
+ |
+ | [31m[!][0m Title: Elementor < 3.1.4 - Authenticated Stored Cross-Site Scripting (XSS) in Divider Widget
+ |     Fixed in: 3.1.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/aa152ad0-5b3d-4d1f-88f4-6899a546e72e
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24203
+ |      - https://www.wordfence.com/blog/2021/03/cross-site-scripting-vulnerabilities-in-elementor-impact-over-7-million-sites/
+ |
+ | [31m[!][0m Title: Elementor < 3.1.4 - Authenticated Stored Cross-Site Scripting (XSS) in Accordion Widget
+ |     Fixed in: 3.1.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/772e172f-c8b4-4a6a-9eb9-9663295cfedf
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24204
+ |      - https://www.wordfence.com/blog/2021/03/cross-site-scripting-vulnerabilities-in-elementor-impact-over-7-million-sites/
+ |
+ | [31m[!][0m Title: Elementor < 3.1.4 - Authenticated Stored Cross-Site Scripting (XSS) in Icon Box Widget
+ |     Fixed in: 3.1.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/ef23df6d-e265-44f6-bb94-1005b16d34d9
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24205
+ |      - https://www.wordfence.com/blog/2021/03/cross-site-scripting-vulnerabilities-in-elementor-impact-over-7-million-sites/
+ |
+ | [31m[!][0m Title: Elementor < 3.1.4 - Authenticated Stored Cross-Site Scripting (XSS) in Image Box Widget
+ |     Fixed in: 3.1.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/2f66efd9-7d55-4f33-9109-3cb583a0c309
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24206
+ |      - https://www.wordfence.com/blog/2021/03/cross-site-scripting-vulnerabilities-in-elementor-impact-over-7-million-sites/
+ |
+ | [31m[!][0m Title: Elementor < 3.4.8 - DOM Cross-Site-Scripting
+ |     Fixed in: 3.4.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/fbed0daa-007d-4f91-8d87-4bca7781de2d
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24891
+ |      - https://www.jbelamor.com/xss-elementor-lightox.html
+ |
+ | [31m[!][0m Title: Elementor 3.6.0-3.6.2 - Subscriber+ Arbitrary File Upload
+ |     Fixed in: 3.6.3
+ |     References:
+ |      - https://wpscan.com/vulnerability/df62d170-c7d1-43a4-b6dc-20512934c33e
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1329
+ |      - https://plugins.trac.wordpress.org/changeset/2708766/elementor/trunk/core/app/modules/onboarding/module.php?old=2688036&old_path=elementor%2Ftrunk%2Fcore%2Fapp%2Fmodules%2Fonboarding%2Fmodule.php
+ |      - https://www.wordfence.com/blog/2022/04/elementor-critical-remote-code-execution-vulnerability/
+ |
+ | [31m[!][0m Title: Elementor < 3.5.6 - DOM Reflected Cross-Site Scripting
+ |     Fixed in: 3.5.6
+ |     References:
+ |      - https://wpscan.com/vulnerability/9758570b-4729-4eef-ad52-b6e922f536d6
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29455
+ |      - https://rotem-bar.com/hacking-65-million-websites-greater-cve-2022-29455-elementor
+ |
+ | [31m[!][0m Title: Elementor Website Builder < 3.12.2 - Admin+ SQLi
+ |     Fixed in: 3.12.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/a875836d-77f4-4306-b275-2b60efff1493
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0329
+ |
+ | [31m[!][0m Title: Elementor Website Builder < 3.13.2 - Missing Authorization
+ |     Fixed in: 3.13.2
+ |     Reference: https://wpscan.com/vulnerability/0b68091c-6a05-4f81-a718-6ec139df2e96
+ |
+ | [31m[!][0m Title: Elementor < 3.5.5 - Iframe Injection
+ |     Fixed in: 3.5.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/8273357e-f9e1-44bc-8082-8faab838eda7
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4953
+ |      - https://github.com/elementor/elementor/commit/292fc49e0f979bd52d838f0326d1faaebfa59f5e
+ |
+ | [31m[!][0m Title: Elementor Website Builder < 3.16.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via get_inline_svg()
+ |     Fixed in: 3.16.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/62b53acf-6551-4ea7-8727-039a3c9ba7ce
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47505
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/b44ef21f-464e-487a-ba5a-fe889e4c488c
+ |
+ | [31m[!][0m Title: Elementor Website Builder < 3.16.5 - Missing Authorization to Arbitrary Attachment Read
+ |     Fixed in: 3.16.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/e60f0f7e-4c3b-4107-803a-8e03526859ed
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47504
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/c873c76a-144e-4945-8fa2-c9ffe0e3c061
+ |
+ | [31m[!][0m Title: Elementor < 3.18.2 - Contributor+ Arbitrary File Upload to RCE via Template Import
+ |     Fixed in: 3.18.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/a6b3b14c-f06b-4506-9b88-854f155ebca9
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48777
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b6d0a38-ac28-41c9-9da1-b30b3657b463
+ |
+ | [31m[!][0m Title: Elementor < 3.19.1 - Authenticated(Contributor+) Arbitrary File Deletion and PHAR Deserialization
+ |     Fixed in: 3.19.1
+ |     References:
+ |      - https://wpscan.com/vulnerability/4d7dfcc6-8c32-4e0d-b3bb-7e2685916e2b
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-24934
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/4915b769-9499-40ac-835e-279e3a910558
+ |
+ | [31m[!][0m Title: Elementor Website Builder – More than Just a Page Builder < 3.19.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via get_image_alt
+ |     Fixed in: 3.19.0
+ |     References:
+ |      - https://wpscan.com/vulnerability/57af46d9-9a26-4085-9829-e0add7893332
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0506
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/4473d3f6-e324-40f5-b92b-167f76b17332
+ |
+ | [31m[!][0m Title: Elementor Website Builder < 3.20.3 - Contributor+ DOM Stored XSS
+ |     Fixed in: 3.20.3
+ |     References:
+ |      - https://wpscan.com/vulnerability/22e8d017-79f5-40c8-8a2c-e0ee42ba80c8
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2117
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/c8d7448a-b8a6-4b0b-92df-a15272fc56bf
+ |
+ | The version could not be determined.
+
+[32m[+][0m elementor-pro
+ | Location: https://amomi.com.vn/wp-content/plugins/elementor-pro/
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | [31m[!][0m 7 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: Elementor Pro < 3.19.3 - Authenticated (Contributor+) Information Exposure
+ |     Fixed in: 3.19.3
+ |     References:
+ |      - https://wpscan.com/vulnerability/52195b1a-31b9-46da-bed8-7fdd2c6c8c14
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-23523
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/ecc8996a-d95c-4711-ac7d-523f5100c7fc
+ |
+ | [31m[!][0m Title: Elementor Website Builder Pro < 3.20.2 - Authententicated (Contributor+) Stored Cross-Site Scripting
+ |     Fixed in: 3.20.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/d332bb66-e69c-4d11-8ff2-2c35d7ce2808
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1364
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/531954dd-ed3f-4626-adab-c1bba8407c89
+ |
+ | [31m[!][0m Title: Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) DOM-Based Stored Cross-Site Scripting via video_html_tag
+ |     Fixed in: 3.20.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/964c149d-fb08-4f86-a9a8-34a4412b5fdd
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2781
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/54970085-5206-45b6-adcf-11e6dd4cd633
+ |
+ | [31m[!][0m Title: Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
+ |     Fixed in: 3.20.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/a48b0031-02f6-4871-beb3-0f61e1cd3d28
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2121
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/8698d6dd-7376-4d29-8a5c-21c239a7aa03
+ |
+ | [31m[!][0m Title: Elementor Website Builder – More than Just a Page Builder < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Post Navigation
+ |     Fixed in: 3.20.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/ed24ea21-967a-43e3-8219-daed594c6e11
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2120
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/de1742d4-f498-4ad4-b6a1-88cb60e83afc
+ |
+ | [31m[!][0m Title: Elementor Website Builder Pro < 3.20.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Form Widget SVGZ File Upload
+ |     Fixed in: 3.20.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/249f4270-610c-4422-b34f-e714358fb398
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1521
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/ecd01ea6-9476-47e1-9959-3f8d9ce1c1f3
+ |
+ | [31m[!][0m Title: Elementor Website Builder Pro < 3.21.2 - Authenticated (Contributor+) DOM-Based Stored Cross-Site Scripting
+ |     Fixed in: 3.21.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/f54baf17-050d-4972-9631-3026dfb04496
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4107
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d5d47bd-4f05-4dc7-84c1-f7bc1196ee16
+ |
+ | Version: 3.13.2 (20% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.13.2
+ |  - https://amomi.com.vn/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.13.2
+
+[32m[+][0m essential-addons-for-elementor-lite
+ | Location: https://amomi.com.vn/wp-content/plugins/essential-addons-for-elementor-lite/
+ | Latest Version: 5.9.19
+ | Last Updated: 2024-05-05T09:31:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | [31m[!][0m 25 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 4.5.4 - Contributor+ Stored Cross-Site Scripting (XSS)
+ |     Fixed in: 4.5.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/7fb708da-e8c4-4455-b4f9-c4ad72f877da
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-24255
+ |      - https://www.wordfence.com/blog/2021/04/recent-patches-rock-the-elementor-ecosystem/
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.0.5 - Unauthenticated LFI
+ |     Fixed in: 5.0.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/0d02b222-e672-4ac0-a1d4-d34e1ecf4a95
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0320
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor Lite < 5.0.9 - Reflected Cross-Site Scripting
+ |     Fixed in: 5.0.9
+ |     References:
+ |      - https://wpscan.com/vulnerability/9ea3248d-8320-465f-bf31-4365148b4b56
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0683
+ |      - https://www.wordfence.com/vulnerability-advisories/#CVE-2022-0683
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor 5.4.0-5.7.1 - Unauthenticated Privilege Escalation
+ |     Fixed in: 5.7.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/4855dbf0-d40c-46be-840b-aed1168e2191
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-32243
+ |
+ | [31m[!][0m Title: Essential Addons For Elementor < 5.8.2 - Unauthenticated MailChimp API Key Disclosure
+ |     Fixed in: 5.8.2
+ |     References:
+ |      - https://wpscan.com/vulnerability/c9c7e716-49c2-4b07-8c1c-9bf366573dff
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-3779
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.8.9 - Authenticated (Contributor+) Privilege Escalation
+ |     Fixed in: 5.8.9
+ |     References:
+ |      - https://wpscan.com/vulnerability/76800214-71ac-4547-9bce-4726c51f6462
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-41955
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/8c13701e-424d-462f-b152-4dc5ad3ef197
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.3 - Contributor+ Stored XSS
+ |     Fixed in: 5.9.3
+ |     References:
+ |      - https://wpscan.com/vulnerability/10a73fea-68b4-4861-8ac1-b5ac278fed11
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-7044
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/6e770e98-3c13-4e37-b51b-4c39bce2cb42
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.5 - Contributor+ Stored Cross-Site Scripting via Image URl
+ |     Fixed in: 5.9.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/6955630f-29c0-4996-9184-325ea153dfcf
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0585
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/417baa1c-29f0-4fec-8008-5b52359b3328
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.5 - Contributor+ Stored Cross-Site Scritping
+ |     Fixed in: 5.9.5
+ |     References:
+ |      - https://wpscan.com/vulnerability/427af876-f60c-4219-b5de-1c72b41c0136
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0586
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/c00ff4bd-d846-4e3f-95ed-2a6430c47ebf
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.8 - Contributor+ Stored XSS
+ |     Fixed in: 5.9.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/d6f1740c-9e31-4be1-81ff-62bfd5b568fe
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0954
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/875db71d-c799-40b9-95e1-74d53046b0a9
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting via Filterable Gallery
+ |     Fixed in: 5.9.9
+ |     References:
+ |      - https://wpscan.com/vulnerability/49240593-fb6a-4d8c-a369-c4606cd9ee24
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1171
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/fafdd087-9637-41df-bc5a-97e1a02ea744
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting via Accordion
+ |     Fixed in: 5.9.9
+ |     References:
+ |      - https://wpscan.com/vulnerability/0a8dde9a-bac0-498d-a68e-466a29401a08
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1172
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/f2ff2cc6-b584-442b-890b-033a0a047c24
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting
+ |     Fixed in: 5.9.9
+ |     References:
+ |      - https://wpscan.com/vulnerability/538a02f8-1aac-4f5e-ad22-7b98745be27e
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1276
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/af8bee01-15bc-485e-8b01-8b68b199b34d
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.9 - Contributor+ Stored Cross-Site Scripting
+ |     Fixed in: 5.9.9
+ |     References:
+ |      - https://wpscan.com/vulnerability/5e0c33f9-178d-42ca-bc5f-f1354be951e5
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1236
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/43014ecd-72d9-44cc-be24-c0c9790ddc20
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.10 - Contributor+ Stored Cross-Site Scripting via Data Table
+ |     Fixed in: 5.9.10
+ |     References:
+ |      - https://wpscan.com/vulnerability/76499eab-5dee-4f9a-b7cf-d89d46ce5e8b
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1537
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/81a48c61-4191-4252-9230-9df8fc5e3443
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.10 - Contributor+ Stored Cross-Site Scripting via Event Calendar
+ |     Fixed in: 5.9.10
+ |     References:
+ |      - https://wpscan.com/vulnerability/fc358e07-84d1-48c2-bc0a-72c399b3163c
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1536
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/12dc9e63-17bb-4755-be3c-ae8b26edd3cd
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.12 - Contributor+ Stored XSS
+ |     Fixed in: 5.9.12
+ |     References:
+ |      - https://wpscan.com/vulnerability/8a3c90da-f467-4795-b912-afe7c43e8258
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2650
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/7242d808-9c33-4b3f-bda6-b4b72ca37de9
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.12 - Contributor+ Stored XSS
+ |     Fixed in: 5.9.12
+ |     References:
+ |      - https://wpscan.com/vulnerability/78d2f15c-a336-4749-bd1e-9507165061f3
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2623
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/baa92aee-a0a0-45d4-aa12-1449a829930c
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.14 - Unauthenticated Private/Draft Posts Access
+ |     Fixed in: 5.9.14
+ |     References:
+ |      - https://wpscan.com/vulnerability/e2aa7fa0-d9c4-4a41-9479-350ea2ba375a
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2974
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/78f96d7f-aeca-4959-9573-0fb6402de007
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.14 - Author+ PHP Object Injection
+ |     Fixed in: 5.9.14
+ |     References:
+ |      - https://wpscan.com/vulnerability/1f720bb4-0018-4d46-83bb-034cb4d5c372
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3018
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/342049e5-834e-4867-8174-01ca7bb0caa2
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor < 5.9.15 - Contributor+ Store XSS via Widget URL
+ |     Fixed in: 5.9.15
+ |     References:
+ |      - https://wpscan.com/vulnerability/9833f8a9-837f-4e62-9050-c6f656b873a4
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3333
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/aa5bdaf9-fbde-40d4-a72a-fd24489818b3
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.16 - Contributor+ Stored Cross-Site Scripting
+ |     Fixed in: 5.9.16
+ |     References:
+ |      - https://wpscan.com/vulnerability/de4bd46a-d2fa-48ca-8344-3d7cc30667c5
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4003
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/1cf3190c-e247-4bcc-99e0-2ab2d2fa0590
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor  < 5.9.16 - Contributor+ Stored Cross-Site Scripting 
+ |     Fixed in: 5.9.16
+ |     References:
+ |      - https://wpscan.com/vulnerability/2c8eed37-8784-4c48-b819-e2dd4301ca20
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3728
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/284ea577-ff67-4681-995b-f7bb5ef0ff3e
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor  < 5.9.16 - Information Exposure
+ |     Fixed in: 5.9.16
+ |     References:
+ |      - https://wpscan.com/vulnerability/11c8df8e-822e-402e-b94f-81d15a7dfe0a
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3733
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/3d604f7a-947c-43f4-bba6-e7e98b2d7844
+ |
+ | [31m[!][0m Title: Essential Addons for Elementor – Best Elementor Templates, Widgets, Kits & WooCommerce Builders < 5.9.18 - Contributor+ Stored XSS
+ |     Fixed in: 5.9.18
+ |     References:
+ |      - https://wpscan.com/vulnerability/0341204b-0260-451f-ae5c-66d3afd81f9f
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4156
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/23a66e6b-cec0-4110-9bef-a5d41ce1c954
+ |
+ | The version could not be determined.
+
+[32m[+][0m revslider
+ | Location: https://amomi.com.vn/wp-content/plugins/revslider/
+ | Last Updated: 2024-04-30T13:53:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 6.7.9
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By:
+ |  Urls In 404 Page (Passive Detection)
+ |  Meta Generator (Passive Detection)
+ |
+ | [31m[!][0m 6 vulnerabilities identified:
+ |
+ | [31m[!][0m Title: Revolution Slider <= 6.6.12 - Author+ Remote Code Execution
+ |     Fixed in: 6.6.13
+ |     References:
+ |      - https://wpscan.com/vulnerability/a8350890-e6d4-4b04-a158-2b0ee3748e65
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-2359
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.6.15 - Authenticated (Contributor+) Stored Cross-Site Scripting
+ |     Fixed in: 6.6.15
+ |     References:
+ |      - https://wpscan.com/vulnerability/3cde24f3-aaad-4eb3-b6ba-a518afe66fbe
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47772
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/772e843b-00ea-45f5-b730-c9a793d4c2db
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.6.16 - Authenticated (Author+) Arbitrary File Upload
+ |     Fixed in: 6.6.16
+ |     References:
+ |      - https://wpscan.com/vulnerability/1b841a64-fb0a-434f-b7b4-0777f0480c87
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-47784
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2d29afd-06e8-461a-918f-38228441a51a
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.6.19 - Author+ Insecure Deserialization leading to RCE
+ |     Fixed in: 6.6.19
+ |     References:
+ |      - https://wpscan.com/vulnerability/36ced447-84ea-4162-80d2-6df226cb53cb
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6528
+ |
+ | [31m[!][0m Title: Revslider < 6.7.0 - Authenticated (Author+) Stored Cross-Site Scripting
+ |     Fixed in: 6.7.0
+ |     References:
+ |      - https://wpscan.com/vulnerability/8238962e-feca-4a45-b335-3c92e668c889
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2306
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/f6af1e90-9bad-470b-9e00-137000c0450c
+ |
+ | [31m[!][0m Title: Slider Revolution < 6.7.8 - Authenticated (Author+) Stored Cross-Site Scripting via htmltag Parameter
+ |     Fixed in: 6.7.8
+ |     References:
+ |      - https://wpscan.com/vulnerability/50dd9668-c263-4bfd-8a94-00a3ad9f656d
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-4092
+ |      - https://www.wordfence.com/threat-intel/vulnerabilities/id/8437abcc-3e34-4a8a-bfe2-2ff7c9f41164
+ |
+ | Version: 6.6.12 (60% confidence)
+ | Found By: Meta Generator (Passive Detection)
+ |  - https://amomi.com.vn/, Match: 'Powered by Slider Revolution 6.6.12'
+
+[32m[+][0m woocommerce
+ | Location: https://amomi.com.vn/wp-content/plugins/woocommerce/
+ | Latest Version: 8.8.3 (up to date)
+ | Last Updated: 2024-04-30T11:42:00.000Z
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 8.8.3 (30% confidence)
+ | Found By: Query Parameter (Passive Detection)
+ |  - https://amomi.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=8.8.3
+ |  - https://amomi.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.8.3
+ |  - https://amomi.com.vn/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=8.8.3
+
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m WPScan DB API OK
+ | Plan: free
+ | Requests Done (during the scan): 10
+ | Requests Remaining: 17
+
+[32m[+][0m Finished: Tue May  7 07:23:37 2024
+[32m[+][0m Requests Done: 205
+[32m[+][0m Cached Requests: 6
+[32m[+][0m Data Sent: 40.932 KB
+[32m[+][0m Data Received: 1.682 MB
+[32m[+][0m Memory used: 247.969 MB
+[32m[+][0m Elapsed time: 00:01:14
